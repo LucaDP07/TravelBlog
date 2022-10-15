@@ -1,1 +1,1 @@
-web: gunicorn traveldream.wsgi
+web: gunicorn traveldream.wsgi 
