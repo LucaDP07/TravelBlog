@@ -46,6 +46,11 @@ body {
     background-color: #23BBBB;
 }
 
+#logo {
+    width: 151px;
+    height: 41px;
+}
+
 .author {
     color: white;
     margin: 4px;
