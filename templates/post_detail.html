@@ -91,31 +91,31 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="col-md-4 card mb-4  mt-3 ">
-            <div class="card-body">
-                <!-- For later -->
-                {% if commented %}
-                <div class="alert alert-success" role="alert">
-                    Your comment is awaiting approval
-                </div>
-                {% else %}
-                {% if user.is_authenticated %}
-                
-                <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
-                    {{ comment_form |crispy }}
-                    {% csrf_token %}
-                <br/>
-                    <button type="submit" class="btn btn-outline-info">Submit</button>
-                </form>
 
-                {% endif %}
-                {% endif %}
-                
+        <div class="row">
+            <div class="col-12 col-md-6 card mb-6 mt-3">
+                <div class="card-body">
+                    {% if commented %}
+                    <div class="alert alert-success" role="alert">
+                        Your comment is pending approval!
+                    </div>
+                    {% else %}
+                    {% if user.is_authenticated %}
+                    <h2 class="card-title">Leave a comment:</h2>
+                    <p>Posting as: {{ user.username }}</p>
+                    <form method="post" style="margin-top: 1.3em;">
+                        {{ comment_form | crispy }}
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    </form>
+                    {% endif %}
+                    {% endif %}
+
+                </div>
             </div>
         </div>
     </div>
+
 </div>
 
 {% endblock content %}
