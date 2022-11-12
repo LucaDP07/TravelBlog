@@ -22,7 +22,6 @@ class PostDetail(View):
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
 
-
         return render (
             request,
             "post_detail.html",
@@ -75,7 +74,10 @@ class PostLike(View):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
+            messages.info(
+                request, 'You took the favourite star away from this post!')
         else:
             post.likes.add(request.user)
+            messages.success(request, 'You gave this post a favourite star!')
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
