@@ -3,22 +3,10 @@ body {
 }
 
 .brand {
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
     color: #4A4A4F;
-}
-
-.red-o {
-    color: #E84610;
-}
-
-.thin {
-    font-weight: 300;
-}
-
-.light-bg {
-    background-color: #fff;
 }
 
 .dark-bg {
@@ -43,7 +31,7 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #23BBBB;
+    background-color: #FF5733;
 }
 
 #logo {
@@ -98,7 +86,7 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #900C3F ;
 }
 
 .post-title {
@@ -145,3 +133,9 @@ body {
     background: transparent;
     border: none;
 }
+
+.trip-form {
+    width: 75%;
+    margin: auto;
+}
+
