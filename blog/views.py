@@ -93,7 +93,7 @@ class CreateTrip(
     Logged in user can create a recipe and add to my recipes list
     """
     model = Post
-    fields = ['title', 'content', 'slug']
+    fields = ['title', 'excerpt', 'content', 'slug']
     template_name = 'trip_form.html'
     success_url = reverse_lazy('home')
     success_message = "You have successfully created a post!"
@@ -113,7 +113,7 @@ class EditTrip(SuccessMessageMixin, LoginRequiredMixin, generic.UpdateView):
     Logged in user can edit a recipe from their my recipes list
     """
     model = Post
-    fields = ['title', 'content', 'slug']
+    fields = ['title', 'excerpt', 'content', 'slug']
     template_name = 'update_post.html'
     success_url = reverse_lazy('home')
     success_message = "Trip successfully updated!"
