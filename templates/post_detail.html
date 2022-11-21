@@ -73,14 +73,15 @@
     
     <div class="col text-center">
         {% if user.is_authenticated %}
-        <br>
-        <a class="btn btn-outline-info" href="{% url 'tripedit' post.pk %}">Edit Post</a>
-        <a class="btn btn-outline-info" href="{% url 'tripdelete' post.pk %}">Delete Post</a>
+            {% if user.id == post.author.id %}
+                <br>
+                <a class="btn btn-outline-info" href="{% url 'tripedit' post.pk %}">Edit Post</a>
+                <a class="btn btn-outline-info" href="{% url 'tripdelete' post.pk %}">Delete Post</a>
+            {% endif %}
         {% endif %}
     </div>
 
     <div class="col">
-        <hr>
     </div>
 
     <div class="row">

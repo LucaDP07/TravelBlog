@@ -12,7 +12,7 @@
     </div>
 
     <div class="card-title">
-        <h3>Edit your trip</h3>
+        <h3>Edit: {{ post.title }}</h3>
     </div>
     <div class="card-body">
         <div class="container-fluid">
@@ -20,7 +20,7 @@
                 <form method="POST" enctype='multipart/form-data'>
                     {% csrf_token %}
                     {{ form | crispy }}
-<br>
+                    <br>
                     <input type="submit" value="Submit" class="btn btn-outline-info">
 
                 </form>
