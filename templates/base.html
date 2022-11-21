@@ -4,7 +4,7 @@
 <html class="h-100">
 
 <head>
-    <title>TravelDrea</title>
+    <title>TravelDream</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -41,17 +41,19 @@
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'mytrips' %}">Add your trip</a>
+                        <a class="nav-link {% if '/addtrip/' in request.path %}active{% endif %}" href="{% url 'addtrip' %}">Add a trip</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link active" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                        <a class="nav-link {% if '/account/signup/' in request.path %}active{% endif %}"
+                        href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Sign In</a>
+                        <a class="nav-link{% if '/account/login/' in request.path %}active{% endif %}"
+                        href="{% url 'account_login' %}">Sign In</a>
                     </li>
 
                     {% endif %}

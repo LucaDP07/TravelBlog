@@ -87,25 +87,15 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
-class MyTripList(LoginRequiredMixin, generic.ListView):
-    """
-    Displays logged in user's own recipes
-    """
-    model = Post
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
-    template_name = 'mytrips.html'
-    context_object_name = 'blog'
-
-
-class TripCreate(
+class CreateTrip(
                   SuccessMessageMixin, LoginRequiredMixin, generic.CreateView):
     """
     Logged in user can create a recipe and add to my recipes list
     """
     model = Post
-    fields = ['trip_image', 'title', 'text', ]
-    template_name = 'mytrips.html'
-    success_url = reverse_lazy('mytrips')
+    fields = ['title', 'content', 'slug']
+    template_name = 'trip_form.html'
+    success_url = reverse_lazy('home')
     success_message = "You have successfully created a post!"
 
     def form_valid(self, form):
@@ -115,4 +105,38 @@ class TripCreate(
         """
         form.instance.author = self.request.user
         form.instance.status = 1
-        return super(TripCreate, self).form_valid(form)
+        return super(CreateTrip, self).form_valid(form)
+   
+
+class EditTrip(SuccessMessageMixin, LoginRequiredMixin, generic.UpdateView):
+    """
+    Logged in user can edit a recipe from their my recipes list
+    """
+    model = Post
+    fields = ['title', 'content', 'slug']
+    template_name = 'update_post.html'
+    success_url = reverse_lazy('home')
+    success_message = "Trip successfully updated!"
+
+    def form_valid(self, form):
+        """
+        Sets logged in user as author field in form
+        Sets form default status to published
+        """
+        form.instance.author = self.request.user
+        form.instance.status = 1
+        return super(EditTrip, self).form_valid(form)
+
+
+class DeleteTrip(SuccessMessageMixin, LoginRequiredMixin, generic.DeleteView):
+    """
+    Logged in user can delete a recipe from their my recipes list
+    """
+    model = Post
+    template_name = 'delete_post.html'
+    success_url = reverse_lazy('home')
+    success_message = "Trip deleted!"
+
+    def delete(self, request, *args, **kwargs):
+        messages.warning(self.request, self.success_message)
+        return super(DeleteTrip, self).delete(request, *args, **kwargs)

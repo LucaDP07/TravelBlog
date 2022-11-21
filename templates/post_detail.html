@@ -1,5 +1,6 @@
-{% extends 'base.html' %} {% block content %}
-
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
 {% load crispy_forms_tags %}
 
 <div class="masthead">
@@ -15,7 +16,7 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                <img class="card-img-top" src="https://res.cloudinary.com/luke07/image/upload/v1668299060/sd4avtbmcy5xz5ffdlic.jpg" alt="Image of mountains">
                 {% else %}
                 <img src=" {{ post.featured_image.url }}" width="100%">
                 {% endif %}
@@ -69,6 +70,19 @@
             <hr>
         </div>
     </div>
+    
+    <div class="col text-center">
+        {% if user.is_authenticated %}
+        <br>
+        <a class="btn btn-outline-info" href="{% url 'tripedit' post.pk %}">Edit Post</a>
+        <a class="btn btn-outline-info" href="{% url 'tripdelete' post.pk %}">Delete Post</a>
+        {% endif %}
+    </div>
+
+    <div class="col">
+        <hr>
+    </div>
+
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3>Comments:</h3>
