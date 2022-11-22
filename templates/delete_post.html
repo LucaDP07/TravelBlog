@@ -26,7 +26,8 @@
                     {% csrf_token %}
 <br>
                     <strong>Are you sure?</strong><br><br>
-                    <button class="btn btn-outline-info">Delete post!</button>
+                    <a class="btn btn-outline-info" href="{% url 'home' %}">No. Take me back!</a>
+                    <button class="btn btn-outline-info">Yes, delete post!</button>
 
                 </form>
             </div>
