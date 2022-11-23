@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Open+Sans:wght@300&display=swap');
+
 body {
     background-color: #F9FAFC;
+    font-family: Open Sans, sans-serif;
+    
 }
 
 .brand {
@@ -143,4 +147,33 @@ table {
     border: 4px solid #FFA92C;
 }
 
+.hero-image {
+    background-size: cover;
+    min-height: 60vh;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.color-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.2);
+}
+
+@media (max-width:768px) {
+    .hero-image {
+        min-height: 30vh;
+    }
+
+    h1 {
+        font-size: calc(1.525rem + 3.3vw);
+    }
+
+}
 
