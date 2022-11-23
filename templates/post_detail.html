@@ -75,8 +75,8 @@
         {% if user.is_authenticated %}
             {% if user.id == post.author.id %}
                 <br>
-                <a class="btn btn-outline-info" href="{% url 'tripedit' post.pk %}">Edit Post</a>
-                <a class="btn btn-outline-info" href="{% url 'tripdelete' post.pk %}">Delete Post</a>
+                <a class="btn btn-warning" href="{% url 'tripedit' post.pk %}">Edit Post</a>
+                <a class="btn btn-warning" href="{% url 'tripdelete' post.pk %}">Delete Post</a>
             {% endif %}
         {% endif %}
     </div>

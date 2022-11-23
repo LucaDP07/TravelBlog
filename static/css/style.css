@@ -155,6 +155,14 @@ table {
     text-shadow: 2px 2px 2px rgba(0,0,0,.2);
 }
 
+.hero-image-form {
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+}
+
 h1 {
     font-size: 4rem;
 }
@@ -169,6 +177,10 @@ h1 {
 @media (max-width:768px) {
     .hero-image {
         min-height: 30vh;
+    }
+
+    .hero-image-form {
+        min-height: 78vh;
     }
 
     h1 {
