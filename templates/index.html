@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-
+{% if not page_obj.has_previous %}
 <div class="hero-image" style="background-image: url('{% static "images/notepad.jpg" %}')">
     <div class="color-overlay d-flex justify-content-center align-items-center">
         <h1>Welcome to TravelDream</h1>
@@ -23,7 +23,9 @@
     </div>
 
 </section>
-            
+
+{% endif %}
+      
 
 <div class="container-fluid">
     <div class="row">
@@ -38,7 +40,7 @@
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://res.cloudinary.com/luke07/image/upload/v1668299060/sd4avtbmcy5xz5ffdlic.jpg" alt="Image of mountains">
+                                    src="https://res.cloudinary.com/luke07/image/upload/v1669312266/keislm7vjfltlgpg9b7l.jpg" alt="Image of mountains">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
