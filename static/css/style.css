@@ -115,13 +115,13 @@ body {
 }
 
 .link {
-    color: #23BBBB;
+    color: #FAD02C;
     text-decoration: none;
 }
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: #E84610;
     text-decoration: underline;
 }
 

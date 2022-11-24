@@ -48,10 +48,9 @@
                             {% else %}
                             <span class="text-secondary"><i class="far fa-star"></i></span>
                             {% endif %}
-                        <!-- The number of likes goes before the closing strong tag -->
-                        <span class="text-secondary">{{ post.number_of_likes }} </span>
-                        </strong>
-                        
+                            <!-- The number of likes goes before the closing strong tag -->
+                            <span class="text-secondary">{{ post.number_of_likes }} </span>
+                        </strong>  
                     </div>
                     <div class="col-1">
                         {% with comments.count as total_comments %}
@@ -65,20 +64,19 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            <hr>
-        </div>
-    </div>
+    
     
     <div class="col text-center">
         {% if user.is_authenticated %}
             {% if user.id == post.author.id %}
-                <br>
                 <a class="btn btn-warning" href="{% url 'tripedit' post.pk %}">Edit Post</a>
                 <a class="btn btn-warning" href="{% url 'tripdelete' post.pk %}">Delete Post</a>
             {% endif %}
         {% endif %}
+    </div>
+<br>
+    <div class="col">
+        <hr>
     </div>
 
     <div class="col">
