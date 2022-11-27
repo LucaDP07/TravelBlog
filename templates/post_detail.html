@@ -13,15 +13,15 @@
         </div>
     </div>
 </div>
+ <!-- post content -->
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text "> {{ post.content | safe }}</p>
                 <div class="row">
 
+                     <!-- Article's likes -->
                     <div class="col-1">
                         <strong>
                             {% if user.is_authenticated %}
@@ -36,14 +36,14 @@
                             {% else %}
                             <span class="text-secondary"><i class="far fa-star"></i></span>
                             {% endif %}
-                            <!-- The number of likes goes before the closing strong tag -->
                             <span class="text-secondary">{{ post.number_of_likes }} </span>
                         </strong>  
                     </div>
+
+                    <!-- Article's number of comments -->
                     <div class="col-1">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comment"></i> 
-                            <!-- Our total_comments variable goes before the closing strong tag -->
                             {{ total_comments }}
                         </strong>
                         {% endwith %}
@@ -53,8 +53,7 @@
         </div>
     </div>
 
-    
-    
+    <!-- Edite/delete post for post's author -->
     <div class="col text-center">
         {% if user.is_authenticated %}
             {% if user.id == post.author.id %}
@@ -70,30 +69,26 @@
 
     <div class="col">
     </div>
-
+<!-- article's comments -->
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
             <div class="card-body">
                 <h3>Comments:</h3>
-                <!-- We want a for loop inside the tags to iterate through each comment in comments -->
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
-                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
                         {{ comment.name }}
                         <span class=" text-muted font-weight-normal">
-                            <!-- The comment's created date goes here -->
                             {{ comment.created_on }}
                         </span> wrote:
                     </p>
-                    <!-- The body of the comment goes before the | -->
                     {{ comment.body | linebreaks }}
                 </div>
-                <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>
         <hr>
+        <!-- article comment form -->
         <div class="row">
             <div class="col-12 col-md-6 card mb-6 mt-3">
                 <div class="card-body">

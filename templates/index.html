@@ -2,6 +2,7 @@
 {% load static %}
 {% block content %}
 
+<!-- If statement to show the background image and text only for the home page -->
 {% if not page_obj.has_previous %}
 <div class="hero-image" style="background-image: url('{% static "images/notepad.jpg" %}')">
     <div class="color-overlay d-flex justify-content-center align-items-center">
@@ -29,8 +30,6 @@
 
 <div class="container-fluid">
     <div class="row">
-
-        <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for post in post_list %}

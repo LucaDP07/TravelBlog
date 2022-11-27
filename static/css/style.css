@@ -1,24 +1,10 @@
+/* import the fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Open+Sans:wght@300&display=swap');
 
 body {
     background-color: #F9FAFC;
     font-family: Open Sans, sans-serif;
     
-}
-
-.brand {
-    font-family: Open Sans, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #4A4A4F;
-}
-
-.dark-bg {
-    background-color: #445261;
-}
-
-.main-bg {
-    background-color: #F9FAFC;
 }
 
 .card {
@@ -36,7 +22,6 @@ body {
     aspect-ratio: 16/9;
 }
 
-
 .image-container {
     position: relative;
 }
@@ -49,9 +34,39 @@ body {
     background-color: #FF5733;
 }
 
+
+/* Home page styling */
+
 #logo {
     width: 151px;
     height: 41px;
+}
+
+.hero-image {
+    background-size: cover;
+    min-height: 60vh;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+}
+
+.hero-image-form {
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.color-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.2);
 }
 
 .author {
@@ -112,22 +127,6 @@ body {
     margin-left: 5%;
 }
 
-.post-subtitle {
-    margin-left: 5%;
-    color: lightgray;
-}
-
-.btn-signup {
-    background-color: #23BBBB;
-    color: #fff;
-}
-
-.btn-signup:hover,
-.btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
-}
-
 .link {
     color: #FAD02C;
     text-decoration: none;
@@ -157,36 +156,11 @@ body {
     margin: auto;
 }
 
-table {
-    border: 4px solid #FFA92C;
-}
 
-.hero-image {
-    background-size: cover;
-    min-height: 60vh;
-    position: relative;
-    color: white;
-    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
-}
 
-.hero-image-form {
-    background-size: cover;
-    min-height: 100vh;
-    position: relative;
-    color: white;
-    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
-}
+/* media queries */
 
-h1 {
-    font-size: 4rem;
-}
-
-.color-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,.2);
-}
+/* for small screens up to 768px */
 
 @media (max-width:768px) {
     .hero-image {
@@ -200,6 +174,5 @@ h1 {
     h1 {
         font-size: calc(1.525rem + 3.3vw);
     }
-
 }
 
