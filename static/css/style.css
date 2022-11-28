@@ -7,6 +7,12 @@ body {
     
 }
 
+h1 {
+    font-size: 4rem;
+}
+
+/* Articles images styling */
+
 .card {
     border: none;
     background-color: transparent;
@@ -22,6 +28,10 @@ body {
     aspect-ratio: 16/9;
 }
 
+.card-text p {
+    text-align: justify;
+}
+
 .image-container {
     position: relative;
 }
@@ -30,10 +40,15 @@ body {
     position: absolute;
     bottom: 5%;
     min-width: 30%;
-    left: -2px;
+    right: -2px;
     background-color: #FF5733;
 }
 
+.author {
+    color: white;
+    margin: 4px;
+    text-transform: uppercase;
+}
 
 /* Home page styling */
 
@@ -58,10 +73,6 @@ body {
     text-shadow: 2px 2px 2px rgba(0,0,0,.2);
 }
 
-h1 {
-    font-size: 4rem;
-}
-
 .color-overlay {
     position: absolute;
     width: 100%;
@@ -69,26 +80,19 @@ h1 {
     background-color: rgba(0,0,0,.2);
 }
 
-.author {
-    color: white;
-    margin: 4px;
-    text-transform: uppercase;
-}
+/* Article detail page styling */
 
 .masthead {
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 50vh;
-    width: 100%;
+    height: 33vh;
+    width: 100%; 
     background-size: cover;
-    color: white;
-    object-fit: cover;
-    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: #E18C4E;
     color: white;
     position: relative;
 }
@@ -112,6 +116,8 @@ h1 {
     z-index: 100;
 }
 
+/* Article excerpt styling */
+
 .post-link {
     text-decoration: none;
     color: #445261;
@@ -123,8 +129,13 @@ h1 {
 }
 
 .post-title {
-    margin-top: 15%;
+    margin-top: 5%;
     margin-left: 5%;
+}
+
+.post-subtitle {
+    margin-top: 5%;
+    margin-left: 5%;  
 }
 
 .link {
@@ -137,6 +148,8 @@ h1 {
     color: #E84610;
     text-decoration: underline;
 }
+
+/* button styling */
 
 .btn-like {
     color: #FFA92C;
@@ -156,8 +169,6 @@ h1 {
     margin: auto;
 }
 
-
-
 /* media queries */
 
 /* for small screens up to 768px */
@@ -175,4 +186,5 @@ h1 {
         font-size: calc(1.525rem + 3.3vw);
     }
 }
+
 
