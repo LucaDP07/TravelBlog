@@ -4,13 +4,9 @@
 {% load crispy_forms_tags %}
 
 <div class="masthead" style="background-image: url('{{ post.featured_image.url }}')">
-    <div class="container">
-        <div class="row g-0">
-            <div class="jumbotron jumbotron-fluid">
-                <h1 class="display-4">{{ post.title }}</h1>
-                <p class="lead">{{ post.author}} | {{ post.created_on }}</p>
-            </div>
-        </div>
+    <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-4">{{ post.title }}</h1>
+        <p class="lead">{{ post.author}} | {{ post.created_on }}</p>
     </div>
 </div>
  <!-- post content -->

@@ -83,37 +83,22 @@ h1 {
 /* Article detail page styling */
 
 .masthead {
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 33vh;
-    width: 100%; 
+    background: no-repeat center center;
     background-size: cover;
-}
-
-.masthead-text {
-    background-color: #E18C4E;
     color: white;
-    position: relative;
 }
 
-.masthead-image {
-    position: relative;
-    overflow: hidden;
+.jumbotron {
+    min-height: 60vh;
+    background-color: rgba(0,0,0,.4);
 }
 
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
+.display-4 {
+    margin-left: 5%; 
+}
+
+.lead {
+    margin-left: 5%; 
 }
 
 /* Article excerpt styling */
@@ -185,6 +170,11 @@ h1 {
     h1 {
         font-size: calc(1.525rem + 3.3vw);
     }
+
+    .jumbotron {
+        min-height: 30vh;
+    }
 }
+
 
 
