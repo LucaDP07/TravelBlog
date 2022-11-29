@@ -15,11 +15,10 @@
 
     <div class="text-center m-5">
         <h5>
-        <p>The best part of traveling is sharing your experiences with others. TravelDream has been created with this purpose in mind.</p>
-        <p>Are you looking for an idea for your next getaway? You can simply view someone’s post to get inspired for your next adventure. You can also share your experiences.
-            and communicate with other registered users by leaving a comment or giving them your Likes.
-            Ready to start? Let's go!
-        </p>
+        The best part of traveling is sharing your experiences with others. TravelDream has been created with this purpose in mind.<br>
+        Are you looking for an idea for your next getaway? You can simply view someone’s post to get inspired for your next adventure. You can also share your experiences.
+        and communicate with other registered users by leaving a comment or giving them your Likes.<br>
+        Ready to start? Let's go!
         </h5>
     </div>
 
@@ -37,7 +36,7 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="image of the country">
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
@@ -46,7 +45,7 @@
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
-                            <hr />
+                            <hr>
                             <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-star"></i>
                                 {{ post.number_of_likes }}</p>
                         </div>

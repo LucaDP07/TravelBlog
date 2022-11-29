@@ -16,24 +16,21 @@
             <div class="card-body">
                 <p class="card-text "> {{ post.content | safe }}</p>
                 <div class="row">
-
-                     <!-- Article's likes -->
+                    <!-- Article's likes -->
                     <div class="col-1">
-                        <strong>
-                            {% if user.is_authenticated %}
-                            <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-                                {% csrf_token %}
-                                {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="fas fa-star"></i></button>
-                                {% else %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="far fa-star"></i></button>
-                                {% endif %}
-                            </form>
+                        {% if user.is_authenticated %}
+                        <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                            {% csrf_token %}
+                            {% if liked %}
+                            <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="fas fa-star"></i></button>
                             {% else %}
-                            <span class="text-secondary"><i class="far fa-star"></i></span>
+                            <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="far fa-star"></i></button>
                             {% endif %}
-                            <span class="text-secondary">{{ post.number_of_likes }} </span>
-                        </strong>  
+                        </form>
+                        {% else %}
+                        <span class="text-secondary"><i class="far fa-star"></i></span>
+                        {% endif %}
+                        <span class="text-secondary">{{ post.number_of_likes }} </span>
                     </div>
 
                     <!-- Article's number of comments -->
