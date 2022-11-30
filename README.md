@@ -1,108 +1,191 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Flags Game
 
-Welcome LucaDP07,
+**SITE OVERVIEW**
+- - - 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The Flags Game is a way to test and train the player's reaction time, while having fun.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+The player has to deal with a different set of six flags every three seconds. Five of these represent the Irish flag, while the last one it's the flag of the Ivory Coast, very similar to the Irish one. The player needs to catch the Ivory Coast flag (the intruder). Everytime the player clicks on the Ivory Coast flag a point will be added to the score, and to make sure the player is paying attention, every click on the Irish flag will take away 2 points.
 
-## Gitpod Reminders
+![Alternate text](/assets/images/Responsive.png)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+You can view the deployed website [here](https://lucadp07.github.io/flags-game/).
 
-`python3 -m http.server`
+**UX**
+- - -
 
-A blue button should appear to click: _Make Public_,
+The website is designed for any type of screen in mind (Desktop, Smartphone and Tablet). The structure of each section is simple, user friendly and clear. The selection of colors are inspired by the Irish and Ivory Coast flag, which are the core of the game. The main board has been created to contain the instructions, the game itself and a message showing the final score. All this provides a familiar and not confusing experience to the user. 
 
-Another blue button should appear to click: _Open Browser_.
+**User Stories**
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+As someone who is passionate about reaction time games, I want to challenge my reflexes.
 
-A blue button should appear to click: _Make Public_,
+As a flags lover I would like to experience a game based on flags. 
 
-Another blue button should appear to click: _Open Browser_.
+As a random gamer I would like to experience a clear design for each section and an easy navigation through all of them.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+**WIREFRAMES**
+- - -
 
-To log into the Heroku toolbelt CLI:
+**Home Page**
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![Alternate text](/assets/images/1desktop.png)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+**Game Page**
 
-------
+![Alternate text](/assets/images/2desktop.png)
 
-## Release History
+**Final Score Page**
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+![Alternate text](/assets/images/3desktop.png)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+**Home Page: Tablet View**
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+![Alternate text](/assets/images/1tablet.png)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+**Game Page: Tablet View**
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+![Alternate text](/assets/images/2tablet.png)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+**Home Page: Mobile View**
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+![Alternate text](/assets/images/1smartphone.png)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+**Game Page: Mobile View**
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![Alternate text](/assets/images/2smartphone.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+**FEATURES**
+- - -
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+ - The Game Logo and Heading
+ 
+ At the top of the page the user can find the logo and the heading of the game. These two features are consistent in all the sections.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+ ![Alternate text](/assets/images/title.png)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- The Instructions
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+Here the user can find the rules of the game explained. Before starting to have fun, a quick look at the instructions will help to enjoy the game.
 
-------
+![Alternate Text](/assets/images/Instructions.png)
 
-## FAQ about the uptime script
+ - The Start Button
+ 
+ Right below the logo and the heading, the user can find the Start Button. Once the player has read the instructions, can simply click on ther button to start to play. In the Game Area the button will still be there and everytime the user will ends a game, simply by clicking the button a new game will be started.
 
-**Why have you added this script?**
+ ![Alternate text](/assets/images/StartButton.png)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+ - The Board Game
+ 
+ Once the user clicks on the Start Button, the game starts. The instructions will be replaced by a different set of six flags will be visible every 3 seconds. Five of these represent the Irish flag, while the last one it's the Ivory Coast flag, very similar to the Irish one. The player has 20 seconds to catch the Ivory Coast flag as many times as possible. Everytime the player clicks on the Ivory Coast flag a point will be added to the score, and to make sure the player is paying attention, every click on the Irish flag will take away 2 points.
 
-**How will this affect me?**
+ ![Alternate text](/assets/images/board.png)
+ 
+ - The Current Score Area
+ 
+ Under the Start Button, the user can see the Current Score Area, which will be visible only in the Game Area. The score gets updated everytime the player clicks on the right or wrong flag. In this way the user has the chance to keep track of his/her performance.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+ ![Alternate text](/assets/images/CurrentScore.png)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+ - The Score Area and the Timer
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+ Under the Board Game, the user can find a timer of 20 seconds which will help to keep track of the time left to complete the game. Also, under the timer, the player can find the resume of the games won and lost. The colors choosen for it are green and orange as a connection to the irish flag.
 
-**So….?**
+ ![Alternate text](/assets/images/timer.png)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+  - The Final Score Message
 
-**Can I opt out?**
+ Once the 20 seconds are over the Game Board will display the final score which will replace the flags.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+ ![Alternate text](/assets/images/ScoreMessage.png)
+ 
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+**TECHNOLOGIES USED**
+- - -
 
-**Anything more?**
+- HTML: HTML has been used to give structure and content to the website.
+- CSS: In order to style the content created with HTML, the CSS language has been used.
+- Google Fonts: I used the Kanit and sans-serif font.
+- Font Awesome: I used ther Font Awesome icons for the logo of the game located at the left of the heading.
+- Pixabay: I used this platform for the images of the flags.
+- Balsamiq Wireframes: I used it to produce low fidelity wireframes to organise the structure of the pages.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
----
+**TESTING**
+- - - 
 
-Happy coding!
+All the pages of the website have ben tested using the developer tools in Google Chrome. The code had to be changed along the process in order to achieve the responsiveness required for the project. The preview from Gitpod helped to constantly check all the changes made.
+
+Testing was performed using a MacBook Air (M1, 2020) on macOS Monterey with the following browsers:
+- Google Chrome 102.0.5005.61
+- Safari 15.3
+- Mozilla Firefox 101.0.1
+
+After testing the website I can confirm the project it's responsive in its all pages and works properly on all standard screen sizes.
+
+The "Play" button is working in each section of the project. 
+- In the Home Page the button starts the game. 
+- In the Board Game/Game Area the button reset the score and starts a new game.
+
+
+- BUGS
+
+While on GitPod I was able to see the flags flashing in the Board Game, after the deployment, the live site was not showing the same results as on GitPod. Since I was refencing my images from my css file, I had to tell the server to come out of the css folder. Sorted fixing the path.
+
+* VALIDATOR TESTING
+
+HTML: No errors were returned when passing through the official W3C Validator. (https://validator.w3.org/nu/#textarea).
+
+CSS: No errors were returned when passing through the official (Jigsaw) Validator (https://jigsaw.w3.org/css-validator/validator).
+
+JavaScript: No errors were found on the website when using [JSHint Validator]https://jshint.com/ .
+
+Accessibility: I generated a desktop and mobile report for the deployed site through the Google Chrome Dev Tools.
+
+ - Home Page - Mobile
+ ![Alternate text](/assets/images/lighthouse.png)
+ - Home Page - Desktop
+ ![Alternate text](/assets/images/lighthouse_desktop.png)
+
+ 
+- UNFIXED BUGS
+
+No unfixed bugs.
+
+**DEPLOYMENT**
+- - -
+The site was deployed to GitHub Pages. The steps to deploy are as follows:
+
+1. Navigate to my Github repository: https://github.com/LucaDP07/flags-game
+2. In the GitHub repository navigate to the settings tab.
+3. Select the pages link from the setting menu on the left hand side.
+4. After selecting the main branch, the page provides the link to the completed website
+The live link can be found here: https://lucadp07.github.io/flags-game/
+
+**CREDITS**
+- - - 
+
+**Content**
+
+- The Heading and the Logo were inspired by the [Love Maths](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+2021_T1/courseware/2d651bf3f23e48aeb9b9218871912b2e/a8ec361b95e94c25bf8a821654bd57bc/?child=first) Project.
+
+- The Timer structure was inspired by [WEB CIFAR](https://www.youtube.com/c/WEBCIFAROfficial).
+
+- The Score Area was inspired by the [Love Maths](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+2021_T1/courseware/2d651bf3f23e48aeb9b9218871912b2e/a8ec361b95e94c25bf8a821654bd57bc/?child=first) Project.
+
+- The Javascript code was inspired by the book [Get Coding](https://getcodingkids.com/the-book/).
+
+
+**Media**
+
+- The icon used for the logo was taken from [Font Awesome](https://fontawesome.com/).
+
+- All fonts imported from [Google Fonts](https://fonts.google.com/).
+
+- Screenshot under the section "site overview" was created with [Am I responsive](https://ui.dev/amiresponsive).
+
+- Pictures used for the Game have been taken from [Pixabay](https://pixabay.com/).
+
+- The wireframes have been created using [Balsamiq Wireframes](https://balsamiq.com/wireframes/).
