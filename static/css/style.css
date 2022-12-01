@@ -11,6 +11,10 @@ h1 {
     font-size: 4rem;
 }
 
+p {
+    font-family: Helvetica;
+}
+
 /* Articles images styling */
 
 .card {
@@ -18,8 +22,14 @@ h1 {
     background-color: transparent;
 }
 
-.card-title {
-    font-weight: bold;  
+.card-title h2 {
+    font-weight: bold;
+}
+
+.card-title-form {
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
 }
 
 .card-img-top {
@@ -156,6 +166,7 @@ h1 {
     width: 75%;
     margin: auto;
 }
+
 
 /* media queries */
 

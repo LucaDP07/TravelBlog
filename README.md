@@ -1,11 +1,9 @@
-# Flags Game
+# TravelDream
 
 **SITE OVERVIEW**
 - - - 
 
-The Flags Game is a way to test and train the player's reaction time, while having fun.
-
-The player has to deal with a different set of six flags every three seconds. Five of these represent the Irish flag, while the last one it's the flag of the Ivory Coast, very similar to the Irish one. The player needs to catch the Ivory Coast flag (the intruder). Everytime the player clicks on the Ivory Coast flag a point will be added to the score, and to make sure the player is paying attention, every click on the Irish flag will take away 2 points.
+TravelDream is travel blog where users can share their own travel experiences, a place to build a home for their stories and where they can also enjoy the contents created by other users and, why not, get inspired for their next adventure.
 
 ![Alternate text](/assets/images/Responsive.png)
 
@@ -14,15 +12,60 @@ You can view the deployed website [here](https://lucadp07.github.io/flags-game/)
 **UX**
 - - -
 
-The website is designed for any type of screen in mind (Desktop, Smartphone and Tablet). The structure of each section is simple, user friendly and clear. The selection of colors are inspired by the Irish and Ivory Coast flag, which are the core of the game. The main board has been created to contain the instructions, the game itself and a message showing the final score. All this provides a familiar and not confusing experience to the user. 
+**User Goals**
 
-**User Stories**
+- Find out the purpose of the website.
+- View, create, edit and delete their own post on the website.
+- View posts created by other users and being able to like and comment them.
 
-As someone who is passionate about reaction time games, I want to challenge my reflexes.
+**Site Owners goals**
 
-As a flags lover I would like to experience a game based on flags. 
+- Non registered users are not able to like or comment any post.
+- Comments need to be approved in order to guarantee safe contents to the users.
+- Posts and comments can be controlled through the admin area to avoid an inappropriate use of the website.
 
-As a random gamer I would like to experience a clear design for each section and an easy navigation through all of them.
+**Epic and User Stories**
+
+There are 6 EPICS and 13 USER STORIES.
+
+1.EPIC: Set up admin page for admin to manage trips posts
+- USER STORIES: 
+1. As a site admin I can view the number of likes on a post so that I can see which post is more liked.(View Likes #24)
+2. As a site admin I can view comments of trip posts so that I can read the commentary on a post.(View Comments #27)
+3. As a site admin I can create comments of trips posts so that I can generate discussion on a post.(Create Comments #26)
+4. As a site admin I can approve or disapprove comments so that I can guarantee safe contents to the users.(Approve Comments #22)
+5. As a site admin I can CRUD the contents so that users can enjoy a safe use of the page.(CRUD #18)
+
+2.EPIC: Enable users to set up an account on the website to access the full features.
+- USER STORIES:
+1. As a user I can create an account so that I can interact with the website with likes, comments and creating my own posts.(Create Account #16)
+2. As a registered user I can login and logout of the site so that I can access my content.(LogIn/LogOut #28)
+
+3.EPIC: Create landing page to attract users to the site.
+- USER STORIES:
+1. As a site admin I can provide a clear idea of what the website is about so that users know what to expect from it.(Create a Landing Page #15)
+
+4.EPIC: Enable registered users to CRUD their own trips.
+
+- USER STORIES:
+
+1. As a registered user I can CRUD my own trips so that I can manage my own content.(Create Post #17)
+
+5.EPIC: Create a trips list to provide content to users.
+
+- USER STORIES:
+
+1. As a user I can view a list of articles so that I can select the contents I like and see what the site’s purpose is.(View Pagination #19)
+
+6.EPIC: Enable registered users to interact with trips posts to enhance UX.
+
+- USER STORIES:
+
+1. As a registered user I can like/unlike posts so that I can engage with the site content.(Like/Unlike Post #23)
+
+2. As a registered user I can comment a post so that I can engage with the community and be involved.(Comment Post#21)
+
+4. As a registered user I can add a picture to my post so that I can create a more visually interesting content.(Image Uploading#25)
 
 **WIREFRAMES**
 - - -
