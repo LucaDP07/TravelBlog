@@ -33,7 +33,7 @@ There are 6 EPICS and 13 USER STORIES.
 1. As a site admin I can view the number of likes on a post so that I can see which post is more liked.(View Likes #24)
 2. As a site admin I can view comments of trip posts so that I can read the commentary on a post.(View Comments #27)
 3. As a site admin I can create comments of trips posts so that I can generate discussion on a post.(Create Comments #26)
-4. As a site admin I can approve or disapprove comments so that I can guarantee safe contents to the users.(Approve Comments #22)
+4. As a site admin I can approve or disapprove comments so that I can guarantee safe contents to the users.(Approve Comments #20)
 5. As a site admin I can CRUD the contents so that users can enjoy a safe use of the page.(CRUD #18)
 
 2.EPIC: Enable users to set up an account on the website to access the full features.
@@ -65,7 +65,7 @@ There are 6 EPICS and 13 USER STORIES.
 
 2. As a registered user I can comment a post so that I can engage with the community and be involved.(Comment Post#21)
 
-4. As a registered user I can add a picture to my post so that I can create a more visually interesting content.(Image Uploading#25)
+3. As a registered user I can add a picture to my post so that I can create a more visually interesting content.(Image Uploading#25)
 
 **WIREFRAMES**
 - - -

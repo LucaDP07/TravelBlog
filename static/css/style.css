@@ -3,8 +3,7 @@
 
 body {
     background-color: #F9FAFC;
-    font-family: Open Sans, sans-serif;
-    
+    font-family: Open Sans, sans-serif; 
 }
 
 h1 {
@@ -23,7 +22,7 @@ p {
 }
 
 .card-title h2 {
-    font-weight: bold;
+    font-weight: bold; 
 }
 
 .card-title-form {
