@@ -75,6 +75,15 @@ For the development of the website the Agile methodology was taken using GitHub 
 2.Issues were used to create User Stories with a custom template. Eash user story has been mapped out using the Kanban board format. Each one has acceptance criteria and tasks.
 Each user story was linked to an Epic.
 
+**Structure**
+
+The user will first see the Home Page where the purpose of the website is made clear with a brief introduction. Users can also see a list of 6 posts.
+
+Both registered and unregistered users can read the posts, but only registered users can interact with them by leaving a comment or liking the post itself.
+Post detail page contains details of the post, comments and number of likes.
+
+The "Add a trip" page is accessible only for registered users. This page can be accessed by clicking the 'Add a trip' button in the navigation bar which is only visible for a registered user. After creating the post, Admin user must approve it before the post is displays on the site. Users are able to edit or delete their own posts by clinking the Edit/Delete button located underneath the post. These buttons are only visible to the owner of the post.
+
 **WIREFRAMES**
 - - -
 
@@ -181,13 +190,19 @@ Once a user is logged in, the Sign In button in the navigation bar will be repla
 
 - HTML: HTML has been used to give structure and content to the website.
 - CSS: In order to style the content created with HTML, and give responsiveness to the pages, the CSS language has been used.
+- Java Script: JS was used with Bootstrap to provide interaction on the front-end.
+- Python: It was used to code the back end of the project.
 - Google Fonts: I used the Kanit and sans-serif font.
 - Pixabay: I used this platform for all the images displayed around the website.
 - Bootstrap: Bootstrap was used to style the website, add responsiveness and interactivity.
-- Java Script: JS was used with Bootstrap to provide interaction on the front-end.
-- Python: It was used to code the back end of the project.
 - Cloudinary: Cloudinary was used for hosting the images.
 - Balsamiq Wireframes: I used it to produce low fidelity wireframes to organise the structure of the pages.
+- Gitpod was used to develop the project.
+- GitHub was used to host repository.
+- Heroku was used to deploy the website.
+- Django was used as the main python framework for the development of the project.
+- Django AllAuth was used to provide user account management functionality.
+- Google Chrome Dev Tools was used to check reponsiveness.
 
 
 **TESTING**
@@ -233,13 +248,54 @@ No unfixed bugs.
 
 **DEPLOYMENT**
 - - -
-The site was deployed to GitHub Pages. The steps to deploy are as follows:
+The site was deployed via Heroku. These are the steps I followed:
 
-1. Navigate to my Github repository: https://github.com/LucaDP07/flags-game
-2. In the GitHub repository navigate to the settings tab.
-3. Select the pages link from the setting menu on the left hand side.
-4. After selecting the main branch, the page provides the link to the completed website
-The live link can be found here: https://lucadp07.github.io/flags-game/
+- In the Heroku dashboard, click "New" and then "Create new app". After that enter the app name and specify the region.
+
+- In the Heroku dashboard click on the Resources tab
+Scroll down to Add-Ons, search for and select 'Heroku Postgres'.
+
+- In the setting tab, click on Reveal Config Vars button then copy the value for DATABASE_URL key.
+
+- In Gitpod create a new env.py file and import the os library. Heroku Config vars need to be set accordingly including DATABASE_URL and SECRET_KEY.
+
+- In the settings.py file within the django app, import Path from pathlib, import os and import dj_database_url
+- Insert the line if os.path.isfile("env.py"): import env
+- Remove the insecure secret key that django has in the settings file by default and replace it with SECRET_KEY = os.environ.get('SECRET_KEY')
+- Replace the databases section with DATABASES = { 'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}
+- In the Gitpod terminal, migrate the change by python3 manage.py migrate.
+- Login to Cloudinary and copy the API Environment variable and paste in env.py and also Config Vars in Heroku.
+- In Heroku config vars add DISABLE_COLLECTSTATIC with value of '1' (this must be removed for final deployment)
+- Add Cloudinary libraries to installed apps section of settings.py as per follow:
+
+- - Add 'cloudinary_storage', before 'django.contrib.staticfiles', and 'cloudinary' right after it.
+
+- In the Settings.py file - add the STATIC files settings - the url, storage path, directory path, root path, media url and default file storage path.
+
+- Set TEMPLATES_DIR just below BASE_DIR and insert TEMPLATES_DIR in TEMPLATES array 'DIRS': []
+
+- Set ALLOWED_HOSTS as 'traveldream.herokuapp.com', 'localhost'
+
+- Create Procfile and add the code: web gunicorn traveldream.wsgi
+- On GitHub add, commit and push the changed files.
+- On Heroku click on the Deploy tab, connect to GitHub and search for the repository then Connect
+- Click on Deploy Branch.
+- Once the development process is complete, change the debug setting to: DEBUG = False in settings.py.
+- Considering for this project the summernote editor was used in Heroku add: X_FRAME_OPTIONS = 'SAMEORIGIN' to settings.py.
+- In Heroku settings config vars change the DISABLE_COLLECTSTATIC value to 0.
+- Click on Deploy Branch. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser.
+
+During my work to the project, I had to migrate my database from Heroku to ElephantSQL. Here are the stpes I've taken:
+
+- Create and account with ElephantSQL.
+- Create New Instance, specify the region, select a data center near my location, click review and click "Create Instance"
+- In the ElephantSQL dashboard click on the database instance name for this project(traveldream).
+- In the URL section copy the database URL.
+- In the env.py file replace the DATABASE_URL variable with the the relevant string from ElephantSQ.
+- Run the migration command in the terminal to migrate the database structure to the newly-connected ElephantSQL database.
+
+
+
 
 **CREDITS**
 - - - 
