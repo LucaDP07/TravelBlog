@@ -67,62 +67,70 @@ There are 6 EPICS and 13 USER STORIES.
 
 3. As a registered user I can add a picture to my post so that I can create a more visually interesting content.(Image Uploading#25)
 
+**Strategy**
+
+For the development of the website the Agile methodology was taken using GitHub functions which are issues, milestones, iterations and Kanban board.
+
+1.Milestones were used to create Epics with a custom template.
+2.Issues were used to create User Stories with a custom template. Eash user story has been mapped out using the Kanban board format. Each one has acceptance criteria and tasks.
+Each user story was linked to an Epic.
+
 **WIREFRAMES**
 - - -
 
-**Home Page**
+**Home Page: Desktop - Not logged in view**
 
-![Alternate text](/assets/images/1desktop.png)
+![Alternate text](/static/images/Home%20-%20Desktop%20-%201.png)
 
-**Game Page**
+**Second Page: Desktop - Not logged in view**
 
-![Alternate text](/assets/images/2desktop.png)
+![Alternate text](/static/images/Second%20page%20-%20Desktop.png)
 
-**Final Score Page**
+**Home Page: Desktop - Logged in view**
 
-![Alternate text](/assets/images/3desktop.png)
+![Alternate text](/static/images/Home-Desktop%20-%202.png)
 
-**Home Page: Tablet View**
+**Post Page: Desktop - Not logged in view**
 
-![Alternate text](/assets/images/1tablet.png)
+![Alternate text](/static/images/Article%20Page%20-%20Desktop%20-%201.png)
 
-**Game Page: Tablet View**
+**Post Page: Desktop - Logged in view**
 
-![Alternate text](/assets/images/2tablet.png)
+![Alternate text](/static/images/Article%20Page%20-%20Desktop%20-%202.png)
 
-**Home Page: Mobile View**
+**Add Trip Form: Desktop**
 
-![Alternate text](/assets/images/1smartphone.png)
+![Alternate text](/static/images/Add%20trip%20form.png)
 
-**Game Page: Mobile View**
+**Home Page: Mobile**
 
-![Alternate text](/assets/images/2smartphone.png)
+![Alternate text](/static/images/Home%20-%20Mobile.png)
 
 
 **FEATURES**
 - - -
 
- - The Game Logo and Heading
+ - Navigation menu
  
- At the top of the page the user can find the logo and the heading of the game. These two features are consistent in all the sections.
-
+ The navigation menu is clear and consistent throughout the site to provide the users an easy navigation. Links to Home, Add a trip, Register and Sign In/Out are available. If the user is not signed in the Sign in and Register links are visible in the navbar. If the user is signed in the Sign In and Register links are replaced by a Log Out link and the Add a trip page link is visible. While the Logo will be always displayed in any screen, the other links that the user can find in the bar, will switch to hamburger on tablets and mobiles.
+ 
  ![Alternate text](/assets/images/title.png)
 
-- The Instructions
+- Home Page
 
-Here the user can find the rules of the game explained. Before starting to have fun, a quick look at the instructions will help to enjoy the game.
+1.A hero image is displayed at the top of the page with overlay text welcoming the user to the website. Right below the users can also find a short description of the purpose of the page and what they will find on it.
 
 ![Alternate Text](/assets/images/Instructions.png)
 
- - The Start Button
+ - Trips section
  
- Right below the logo and the heading, the user can find the Start Button. Once the player has read the instructions, can simply click on ther button to start to play. In the Game Area the button will still be there and everytime the user will ends a game, simply by clicking the button a new game will be started.
+ Right below the brief description of the purpose of the page, the users will find a list of six posts.
 
  ![Alternate text](/assets/images/StartButton.png)
 
- - The Board Game
+ - Add a trip form
  
- Once the user clicks on the Start Button, the game starts. The instructions will be replaced by a different set of six flags will be visible every 3 seconds. Five of these represent the Irish flag, while the last one it's the Ivory Coast flag, very similar to the Irish one. The player has 20 seconds to catch the Ivory Coast flag as many times as possible. Everytime the player clicks on the Ivory Coast flag a point will be added to the score, and to make sure the player is paying attention, every click on the Irish flag will take away 2 points.
+ When the users are logged in, they can see on the navigation bar the option "Add a trip". Simply by clicking on it the form opens where the user can enter all the fields to add a post and create a new content.
 
  ![Alternate text](/assets/images/board.png)
  
