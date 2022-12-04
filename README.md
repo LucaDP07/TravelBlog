@@ -112,7 +112,11 @@ Each user story was linked to an Epic.
 
  - Navigation menu
  
- The navigation menu is clear and consistent throughout the site to provide the users an easy navigation. Links to Home, Add a trip, Register and Sign In/Out are available. If the user is not signed in the Sign in and Register links are visible in the navbar. If the user is signed in the Sign In and Register links are replaced by a Log Out link and the Add a trip page link is visible. While the Logo will be always displayed in any screen, the other links that the user can find in the bar, will switch to hamburger on tablets and mobiles.
+ The navigation menu is clear and consistent throughout the site to provide the users an easy navigation. Links to Home, Add a trip, Register and Sign In/Out are available. If the user is not signed in the Sign in and Register links are visible in the navbar. If the user is signed in the Sign In and Register links are replaced by a Log Out link and the Add a trip link is visible. While the Logo will be always displayed in any screen, the other links that the user can find in the bar, will switch to hamburger on tablets and mobiles.
+
+ - Footer
+
+ At the bottom of the page we can find the footer with the links to direct the user to the Facebook, Instagram and Twitter pages.
  
  ![Alternate text](/assets/images/title.png)
 
@@ -124,31 +128,50 @@ Each user story was linked to an Epic.
 
  - Trips section
  
- Right below the brief description of the purpose of the page, the users will find a list of six posts.
+ Right below the brief description of the purpose of the page, the users will find a list of six posts per page(max.) to avoid loading time issues.
 
  ![Alternate text](/assets/images/StartButton.png)
 
  - Add a trip form
  
- When the users are logged in, they can see on the navigation bar the option "Add a trip". Simply by clicking on it the form opens where the user can enter all the fields to add a post and create a new content.
+ When the users are logged in, they can see on the navigation bar the option "Add a trip". Simply by clicking on it the form opens and the user can enter all the fields to add a post and create a new content which will be displayed on the website.
 
  ![Alternate text](/assets/images/board.png)
  
- - The Current Score Area
+ - Post Detail page
  
- Under the Start Button, the user can see the Current Score Area, which will be visible only in the Game Area. The score gets updated everytime the player clicks on the right or wrong flag. In this way the user has the chance to keep track of his/her performance.
+ Accessed by any user simply by clicking on the post itself. The not logged in users can also read the approved comments right below the post. If the user is logged in, instead, there is another function that allows to press the Like button and leave a comment regarding the post. The comments entered here need to be reviewed by the site owner before being displayed in this post detail page.
 
  ![Alternate text](/assets/images/CurrentScore.png)
 
- - The Score Area and the Timer
+ - Edit Post page
 
- Under the Board Game, the user can find a timer of 20 seconds which will help to keep track of the time left to complete the game. Also, under the timer, the player can find the resume of the games won and lost. The colors choosen for it are green and orange as a connection to the irish flag.
+ The Edit post page is accessed by edit post button which is available in the post detail page and it's visible for the user's own post only so that the post can only be edited by its own user or by superuser using the admin page. If the user confirms to edit the post, will be redirected to the Home Page and a message will show below the navbar to inform that the post was succesfully edited.
 
  ![Alternate text](/assets/images/timer.png)
 
-  - The Final Score Message
+  - Delete Post Page
 
- Once the 20 seconds are over the Game Board will display the final score which will replace the flags.
+ The owner of the post also have another button abailable, which is the Delete Post button. If the user clicks on it a Delete Post page displays and asks the user for confirmation to delete the post. Users can either click on "Yes, delete post!" or cancel and go back to the Home Page. 
+ If the user confirms to delete the post, will be redirected to the Home Page and a message will show below the navbar to inform that the post was deleted.
+
+ ![Alternate text](/assets/images/ScoreMessage.png)
+
+   - Register Page
+
+This page can be opened from the register button in the navigation bar. New visitors are simply asked to enter username, password and password confirmation to register. Email field can be left blank as it is optional. Once successfully registered, users will be redirected to the Home Page and have access to all the features available for registered users.
+
+ ![Alternate text](/assets/images/ScoreMessage.png)
+
+- Sign In Page
+
+The Sign In button can be accessed to login. Username and password will be required. On successful login, users will be redirected to the Home Page and a message to inform them that they logged in successfully will be displayed under the navigation bar.
+
+ ![Alternate text](/assets/images/ScoreMessage.png)
+
+- Sign Out Page
+
+Once a user is logged in, the Sign In button in the navigation bar will be replaced with the Logout button. If they want to logout all they need to do is simply click this button and confirm to sign out. Once again, users will be redirected to the Home Page and a message to inform them that they logged out successfully will be displayed under the navigation bar.
 
  ![Alternate text](/assets/images/ScoreMessage.png)
  
@@ -157,10 +180,13 @@ Each user story was linked to an Epic.
 - - -
 
 - HTML: HTML has been used to give structure and content to the website.
-- CSS: In order to style the content created with HTML, the CSS language has been used.
+- CSS: In order to style the content created with HTML, and give responsiveness to the pages, the CSS language has been used.
 - Google Fonts: I used the Kanit and sans-serif font.
-- Font Awesome: I used ther Font Awesome icons for the logo of the game located at the left of the heading.
-- Pixabay: I used this platform for the images of the flags.
+- Pixabay: I used this platform for all the images displayed around the website.
+- Bootstrap: Bootstrap was used to style the website, add responsiveness and interactivity.
+- Java Script: JS was used with Bootstrap to provide interaction on the front-end.
+- Python: It was used to code the back end of the project.
+- Cloudinary: Cloudinary was used for hosting the images.
 - Balsamiq Wireframes: I used it to produce low fidelity wireframes to organise the structure of the pages.
 
 
