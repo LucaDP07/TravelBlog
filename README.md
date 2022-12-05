@@ -147,7 +147,7 @@ The "Add a trip" page is accessible only for registered users. This page can be 
  
  When the users are logged in, they can see on the navigation bar the option "Add a trip". Simply by clicking on it the form opens and the user can enter all the fields to add a post and create a new content which will be displayed on the website.
 
- ![Alternate text](/assets/images/board.png)
+ ![Alternate text](/static/images/form.png)
  
  - Post Detail page
  
@@ -221,9 +221,9 @@ Testing was performed using a MacBook Air (M1, 2020) on macOS Monterey with the 
 
 After testing the website I can confirm the project it's responsive in its all pages and works properly on all standard screen sizes.
 
-The "Play" button is working in each section of the project. 
-- In the Home Page the button starts the game. 
-- In the Board Game/Game Area the button reset the score and starts a new game.
+The forms are working in each section of the project.
+- The users can add, edit and delete eir own posts.
+- Comments can be added through the comment form. To be displayed need to be approved by the owner of the website.
 
 
 - BUGS

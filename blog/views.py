@@ -25,14 +25,14 @@ class PostDetail(View):
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
 
-        return render (
+        return render(
             request,
             "post_detail.html",
             {
                 "post": post,
                 "comments": comments,
                 "commented": False,
-                "liked": liked, 
+                "liked": liked,
                 "comment_form": CommentForm()
 
             },
@@ -58,22 +58,21 @@ class PostDetail(View):
         else:
             comment_form = CommentForm()
 
-
-        return render (
+        return render(
             request,
             "post_detail.html",
             {
                 "post": post,
                 "comments": comments,
                 "commented": True,
-                "liked": liked, 
+                "liked": liked,
                 "comment_form": CommentForm()
             },
         )
 
 
 class PostLike(View):
-    
+
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
@@ -106,7 +105,7 @@ class CreateTrip(
         form.instance.author = self.request.user
         form.instance.status = 1
         return super(CreateTrip, self).form_valid(form)
-   
+
 
 class EditTrip(SuccessMessageMixin, LoginRequiredMixin, generic.UpdateView):
     """
