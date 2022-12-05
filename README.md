@@ -227,10 +227,6 @@ The forms are working in each section of the project.
 - Comments can be added through the comment form. To be displayed need to be approved by the owner of the website.
 
 
-- BUGS
-
-While on GitPod I was able to see the flags flashing in the Board Game, after the deployment, the live site was not showing the same results as on GitPod. Since I was refencing my images from my css file, I had to tell the server to come out of the css folder. Sorted fixing the path.
-
 * VALIDATOR TESTING
 
 HTML: No errors were returned when passing through the official W3C Validator.
@@ -265,16 +261,7 @@ All the .py files are validated in the PEP8 online validator replacement provide
 
 - views.py
 
-![Alternate text](/static/images/)
-
-
-
-Accessibility: I generated a desktop and mobile report for the deployed site through the Google Chrome Dev Tools.
-
- - Home Page - Mobile
- ![Alternate text](/assets/images/lighthouse.png)
- - Home Page - Desktop
- ![Alternate text](/assets/images/lighthouse_desktop.png)
+![Alternate text](/static/images/views.png)
 
  
 - UNFIXED BUGS
@@ -330,30 +317,24 @@ During my work to the project, I had to migrate my database from Heroku to Eleph
 - Run the migration command in the terminal to migrate the database structure to the newly-connected ElephantSQL database.
 
 
-
-
 **CREDITS**
 - - - 
 
 **Content**
 
-- The Heading and the Logo were inspired by the [Love Maths](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+2021_T1/courseware/2d651bf3f23e48aeb9b9218871912b2e/a8ec361b95e94c25bf8a821654bd57bc/?child=first) Project.
+- The Navigation bar, the comments form and the index were inspired by the [I Think Therefore I Blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/) Project.
 
-- The Timer structure was inspired by [WEB CIFAR](https://www.youtube.com/c/WEBCIFAROfficial).
+- Full CRUD functionality application was achieved thanks to [CODEMY](https://www.youtube.com/@Codemycom).
 
-- The Score Area was inspired by the [Love Maths](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+2021_T1/courseware/2d651bf3f23e48aeb9b9218871912b2e/a8ec361b95e94c25bf8a821654bd57bc/?child=first) Project.
-
-- The Javascript code was inspired by the book [Get Coding](https://getcodingkids.com/the-book/).
+- Text posts has been taken by [Lonely Planet](https://www.lonelyplanet.com/).
 
 
 **Media**
-
-- The icon used for the logo was taken from [Font Awesome](https://fontawesome.com/).
 
 - All fonts imported from [Google Fonts](https://fonts.google.com/).
 
 - Screenshot under the section "site overview" was created with [Am I responsive](https://ui.dev/amiresponsive).
 
-- Pictures used for the Game have been taken from [Pixabay](https://pixabay.com/).
+- Pictures used for the website have been taken from [Pixabay](https://pixabay.com/).
 
 - The wireframes have been created using [Balsamiq Wireframes](https://balsamiq.com/wireframes/).
