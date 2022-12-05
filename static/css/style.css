@@ -10,19 +10,11 @@ h1 {
     font-size: 4rem;
 }
 
-p {
-    font-family: Helvetica;
-}
-
 /* Articles images styling */
 
 .card {
     border: none;
     background-color: transparent;
-}
-
-.card-title h2 {
-    font-weight: bold; 
 }
 
 .card-title-form {
