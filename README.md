@@ -5,9 +5,9 @@
 
 TravelDream is travel blog where users can share their own travel experiences, a place to build a home for their stories and where they can also enjoy the contents created by other users and, why not, get inspired for their next adventure.
 
-![Alternate text](/assets/images/Responsive.png)
+![Alternate text](/static/images/responsive.png)
 
-You can view the deployed website [here](https://lucadp07.github.io/flags-game/).
+You can view the deployed website [here](https://traveldream.herokuapp.com/).
 
 **UX**
 - - -
