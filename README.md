@@ -123,23 +123,25 @@ The "Add a trip" page is accessible only for registered users. This page can be 
  
  The navigation menu is clear and consistent throughout the site to provide the users an easy navigation. Links to Home, Add a trip, Register and Sign In/Out are available. If the user is not signed in the Sign in and Register links are visible in the navbar. If the user is signed in the Sign In and Register links are replaced by a Log Out link and the Add a trip link is visible. While the Logo will be always displayed in any screen, the other links that the user can find in the bar, will switch to hamburger on tablets and mobiles.
 
+ ![Alternate text](/static/images/navbar.png)
+
  - Footer
 
  At the bottom of the page we can find the footer with the links to direct the user to the Facebook, Instagram and Twitter pages.
  
- ![Alternate text](/assets/images/title.png)
+ ![Alternate text](/static/images/footer.png)
 
 - Home Page
 
 1.A hero image is displayed at the top of the page with overlay text welcoming the user to the website. Right below the users can also find a short description of the purpose of the page and what they will find on it.
 
-![Alternate Text](/assets/images/Instructions.png)
+![Alternate Text](/static/images/home_page.png)
 
  - Trips section
  
  Right below the brief description of the purpose of the page, the users will find a list of six posts per page(max.) to avoid loading time issues.
 
- ![Alternate text](/assets/images/StartButton.png)
+ ![Alternate text](/static/images/trips_section.png)
 
  - Add a trip form
  
@@ -151,38 +153,40 @@ The "Add a trip" page is accessible only for registered users. This page can be 
  
  Accessed by any user simply by clicking on the post itself. The not logged in users can also read the approved comments right below the post. If the user is logged in, instead, there is another function that allows to press the Like button and leave a comment regarding the post. The comments entered here need to be reviewed by the site owner before being displayed in this post detail page.
 
- ![Alternate text](/assets/images/CurrentScore.png)
+ ![Alternate text](/static/images/post_detail.png)
+
+ ![Alternate text](/static/images/comments_section.png)
 
  - Edit Post page
 
  The Edit post page is accessed by edit post button which is available in the post detail page and it's visible for the user's own post only so that the post can only be edited by its own user or by superuser using the admin page. If the user confirms to edit the post, will be redirected to the Home Page and a message will show below the navbar to inform that the post was succesfully edited.
 
- ![Alternate text](/assets/images/timer.png)
+ ![Alternate text](/static/images/edit_delete.png)
 
   - Delete Post Page
 
  The owner of the post also have another button abailable, which is the Delete Post button. If the user clicks on it a Delete Post page displays and asks the user for confirmation to delete the post. Users can either click on "Yes, delete post!" or cancel and go back to the Home Page. 
  If the user confirms to delete the post, will be redirected to the Home Page and a message will show below the navbar to inform that the post was deleted.
 
- ![Alternate text](/assets/images/ScoreMessage.png)
+ ![Alternate text](/static/images/edit_delete.png)
 
    - Register Page
 
 This page can be opened from the register button in the navigation bar. New visitors are simply asked to enter username, password and password confirmation to register. Email field can be left blank as it is optional. Once successfully registered, users will be redirected to the Home Page and have access to all the features available for registered users.
 
- ![Alternate text](/assets/images/ScoreMessage.png)
+ ![Alternate text](/static/images/signup.png)
 
 - Sign In Page
 
 The Sign In button can be accessed to login. Username and password will be required. On successful login, users will be redirected to the Home Page and a message to inform them that they logged in successfully will be displayed under the navigation bar.
 
- ![Alternate text](/assets/images/ScoreMessage.png)
+ ![Alternate text](/static/images/signin.png)
 
 - Sign Out Page
 
 Once a user is logged in, the Sign In button in the navigation bar will be replaced with the Logout button. If they want to logout all they need to do is simply click this button and confirm to sign out. Once again, users will be redirected to the Home Page and a message to inform them that they logged out successfully will be displayed under the navigation bar.
 
- ![Alternate text](/assets/images/ScoreMessage.png)
+ ![Alternate text](/static/images/signout.png)
  
 
 **TECHNOLOGIES USED**
