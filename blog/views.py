@@ -89,7 +89,7 @@ class PostLike(View):
 class CreateTrip(
                   SuccessMessageMixin, LoginRequiredMixin, generic.CreateView):
     """
-    Logged in user can create a recipe and add to my recipes list
+    Logged in user can create a post
     """
     model = Post
     fields = ['title', 'excerpt', 'content', 'featured_image', 'slug']
@@ -109,7 +109,7 @@ class CreateTrip(
 
 class EditTrip(SuccessMessageMixin, LoginRequiredMixin, generic.UpdateView):
     """
-    Logged in user can edit a recipe from their my recipes list
+    Logged in user can edit a post
     """
     model = Post
     fields = ['title', 'excerpt', 'content', 'featured_image', 'slug']
@@ -129,7 +129,7 @@ class EditTrip(SuccessMessageMixin, LoginRequiredMixin, generic.UpdateView):
 
 class DeleteTrip(SuccessMessageMixin, LoginRequiredMixin, generic.DeleteView):
     """
-    Logged in user can delete a recipe from their my recipes list
+    Logged in user can delete a post they created
     """
     model = Post
     template_name = 'delete_post.html'

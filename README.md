@@ -72,6 +72,7 @@ There are 6 EPICS and 13 USER STORIES.
 For the development of the website the Agile methodology was taken using GitHub functions which are issues, milestones, iterations and Kanban board.
 
 1.Milestones were used to create Epics with a custom template.
+
 2.Issues were used to create User Stories with a custom template. Eash user story has been mapped out using the Kanban board format. Each one has acceptance criteria and tasks.
 Each user story was linked to an Epic.
 
@@ -82,7 +83,7 @@ The user will first see the Home Page where the purpose of the website is made c
 Both registered and unregistered users can read the posts, but only registered users can interact with them by leaving a comment or liking the post itself.
 Post detail page contains details of the post, comments and number of likes.
 
-The "Add a trip" page is accessible only for registered users. This page can be accessed by clicking the 'Add a trip' button in the navigation bar which is only visible for a registered user. After creating the post, Admin user must approve it before the post is displays on the site. Users are able to edit or delete their own posts by clinking the Edit/Delete button located underneath the post. These buttons are only visible to the owner of the post.
+The "Add a trip" page is accessible only for registered users. This page can be accessed by clicking the 'Add a trip' button in the navigation bar which is only visible for a registered user. After creating the post, the user can see it on the Home Page. Users are able to edit or delete their own posts by clicking the Edit/Delete button located underneath the post. These buttons are only visible to the owner of the post.
 
 **WIREFRAMES**
 - - -
@@ -159,20 +160,20 @@ The "Add a trip" page is accessible only for registered users. This page can be 
 
  - Edit Post page
 
- The Edit post page is accessed by edit post button which is available in the post detail page and it's visible for the user's own post only so that the post can only be edited by its own user or by superuser using the admin page. If the user confirms to edit the post, will be redirected to the Home Page and a message will show below the navbar to inform that the post was succesfully edited.
+ The Edit post page is accessed by edit post button which is available in the post detail page and it's visible for the user's own post only so that the post can only be edited by its own user or by superuser using the admin page. If the user confirms the changes made to the post, will be redirected to the Home Page and a message will show below the navbar to inform that the post was succesfully edited.
 
  ![Alternate text](/static/images/edit_delete.png)
 
-  - Delete Post Page
+ - Delete Post Page
 
- The owner of the post also have another button abailable, which is the Delete Post button. If the user clicks on it a Delete Post page displays and asks the user for confirmation to delete the post. Users can either click on "Yes, delete post!" or cancel and go back to the Home Page. 
+ The owner of the post also have another button available, which is the Delete Post button. If the user clicks on it a Delete Post page displays and asks the user for confirmation to delete the post. Users can either click on "Yes, delete post!" or cancel and go back to the Home Page. 
  If the user confirms to delete the post, will be redirected to the Home Page and a message will show below the navbar to inform that the post was deleted.
 
  ![Alternate text](/static/images/edit_delete.png)
 
-   - Register Page
+ - Register Page
 
-This page can be opened from the register button in the navigation bar. New visitors are simply asked to enter username, password and password confirmation to register. Email field can be left blank as it is optional. Once successfully registered, users will be redirected to the Home Page and have access to all the features available for registered users.
+ This page can be opened from the register button in the navigation bar. New visitors are simply asked to enter username, password and password confirmation to register. Email field can be left blank as it is optional. Once successfully registered, users will be redirected to the Home Page and have access to all the features available for registered users.
 
  ![Alternate text](/static/images/signup.png)
 
@@ -232,11 +233,41 @@ While on GitPod I was able to see the flags flashing in the Board Game, after th
 
 * VALIDATOR TESTING
 
-HTML: No errors were returned when passing through the official W3C Validator. (https://validator.w3.org/nu/#textarea).
+HTML: No errors were returned when passing through the official W3C Validator.
 
-CSS: No errors were returned when passing through the official (Jigsaw) Validator (https://jigsaw.w3.org/css-validator/validator).
+![Alternate text](/static/images/html_responsive.png)
 
-JavaScript: No errors were found on the website when using [JSHint Validator]https://jshint.com/ .
+CSS: No errors were returned when passing through the official (Jigsaw) Validator.
+
+![Alternate text](/static/images/css_responsive.png)
+
+All the .py files are validated in the PEP8 online validator replacement provided by Code Institute. No errors detected.
+
+- admin.py
+
+![Alternate text](/static/images/admin.png)
+
+- apps.py
+
+![Alternate text](/static/images/apps.png)
+
+- forms.py
+
+![Alternate text](/static/images/forms.png)
+
+- models.py
+
+![Alternate text](/static/images/models.png)
+
+- urls.py
+
+![Alternate text](/static/images/urls.png)
+
+- views.py
+
+![Alternate text](/static/images/)
+
+
 
 Accessibility: I generated a desktop and mobile report for the deployed site through the Google Chrome Dev Tools.
 
