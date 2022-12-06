@@ -102,9 +102,6 @@ h1 {
     margin-left: 5%; 
 }
 
-/* Create post form styling */
-
-
 /* Article excerpt styling */
 
 .post-link {
@@ -181,7 +178,7 @@ h1 {
     }
 }
 
-/* for small screens up to 400px */
+/* for small screens up to 375px */
 
 @media screen and (max-width:375px) {
 

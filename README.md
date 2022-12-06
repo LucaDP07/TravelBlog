@@ -211,6 +211,7 @@ The "Add a trip" page is accessible only for registered users. This page can be 
 
 **TESTING**
 - - - 
+Manual testing was carried out to ensure the site works as intended.
 
 All the pages of the website have ben tested using the developer tools in Google Chrome. The code had to be changed along the process in order to achieve the responsiveness required for the project. The preview from Gitpod helped to constantly check all the changes made.
 
