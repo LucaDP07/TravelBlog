@@ -46,7 +46,7 @@
         </div>
     </div>
 
-    <!-- Edite/delete article for author's post-->
+    <!-- Edite/delete article buttons for author's post-->
     <div class="col text-center">
         {% if user.is_authenticated %}
             {% if user.id == post.author.id %}
@@ -55,7 +55,7 @@
             {% endif %}
         {% endif %}
     </div>
-<br>
+    <br>
     <div class="col">
         <hr>
     </div>

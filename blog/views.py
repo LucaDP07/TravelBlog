@@ -10,6 +10,9 @@ from .forms import CommentForm
 
 
 class PostList(generic.ListView):
+    """
+    Adjusts site’s pagination to max six posts
+    """
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
@@ -18,6 +21,11 @@ class PostList(generic.ListView):
 
 class PostDetail(View):
     def get(self, request, slug, *args, **kwargs):
+        """
+        Displays full published posts with approved comments
+        Checks if post has been liked by current user
+        Logged In User can like or unlike a post
+        """
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by('created_on')
@@ -39,6 +47,11 @@ class PostDetail(View):
         )
 
     def post(self, request, slug, *args, **kwargs):
+        """
+        Displays full published posts with approved comments
+        Checks if post has been liked by current user
+        User can submit a comment form for approval by admin
+        """
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by('created_on')
@@ -72,16 +85,18 @@ class PostDetail(View):
 
 
 class PostLike(View):
-
+    """
+    Logged in user can like or unlike a post
+    """
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
             messages.info(
-                request, 'You took the favourite star away from this post!')
+                request, 'You unliked this post!')
         else:
             post.likes.add(request.user)
-            messages.success(request, 'You gave this post a favourite star!')
+            messages.success(request, 'You liked this post!')
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
@@ -118,10 +133,6 @@ class EditTrip(SuccessMessageMixin, LoginRequiredMixin, generic.UpdateView):
     success_message = "Trip successfully updated!"
 
     def form_valid(self, form):
-        """
-        Sets logged in user as author field in form
-        Sets form default status to published
-        """
         form.instance.author = self.request.user
         form.instance.status = 1
         return super(EditTrip, self).form_valid(form)

@@ -1,3 +1,6 @@
+"""
+Imports
+"""
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
@@ -6,6 +9,9 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Post(models.Model):
+    """
+    Model for post
+    """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
@@ -19,17 +25,25 @@ class Post(models.Model):
     content = models.TextField(blank=False,)
 
     class Meta:
+        """
+        Posts ordered to show newest first to show regular updates
+        """
         ordering = ['-created_on']
 
     def __str__(self):
         return self.title
 
     def number_of_likes(self):
+        """
+        Returns total number of times users have liked a post
+        """
         return self.likes.count()
 
 
 class Comment(models.Model):
-
+    """
+    Model for comment. Logged in user can leave a comment for a post
+    """
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=80)
     email = models.EmailField()
@@ -39,6 +53,9 @@ class Comment(models.Model):
 
 
 class Meta:
+    """
+    Comments ordered from the oldest to the newest
+    """
     ordering = ["created_on"]
 
     def __str__(self):
