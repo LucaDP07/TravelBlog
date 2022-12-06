@@ -132,9 +132,9 @@ The "Add a trip" page is accessible only for registered users. This page can be 
  
  ![Alternate text](/static/images/footer.png)
 
-- Home Page
+ - Home Page
 
-1.A hero image is displayed at the top of the page with overlay text welcoming the user to the website. Right below the users can also find a short description of the purpose of the page and what they will find on it.
+ 1.A hero image is displayed at the top of the page with overlay text welcoming the user to the website. Right below the users can also find a short description of the purpose of the page and what they will find on it.
 
 ![Alternate Text](/static/images/home_page.png)
 
@@ -177,15 +177,15 @@ The "Add a trip" page is accessible only for registered users. This page can be 
 
  ![Alternate text](/static/images/signup.png)
 
-- Sign In Page
+ - Sign In Page
 
-The Sign In button can be accessed to login. Username and password will be required. On successful login, users will be redirected to the Home Page and a message to inform them that they logged in successfully will be displayed under the navigation bar.
+ The Sign In button can be accessed to login. Username and password will be required. On successful login, users will be redirected to the Home Page and a message to inform them that they logged in successfully will be displayed under the navigation bar.
 
  ![Alternate text](/static/images/signin.png)
 
-- Sign Out Page
+ - Sign Out Page
 
-Once a user is logged in, the Sign In button in the navigation bar will be replaced with the Logout button. If they want to logout all they need to do is simply click this button and confirm to sign out. Once again, users will be redirected to the Home Page and a message to inform them that they logged out successfully will be displayed under the navigation bar.
+ Once a user is logged in, the Sign In button in the navigation bar will be replaced with the Logout button. If they want to logout all they need to do is simply click this button and confirm to sign out. Once again, users will be redirected to the Home Page and a message to inform them that they logged out successfully will be displayed under the navigation bar.
 
  ![Alternate text](/static/images/signout.png)
  
@@ -197,7 +197,6 @@ Once a user is logged in, the Sign In button in the navigation bar will be repla
 - CSS: In order to style the content created with HTML, and give responsiveness to the pages, the CSS language has been used.
 - Java Script: JS was used with Bootstrap to provide interaction on the front-end.
 - Python: It was used to code the back end of the project.
-- Google Fonts: I used the Kanit and sans-serif font.
 - Pixabay: I used this platform for all the images displayed around the website.
 - Bootstrap: Bootstrap was used to style the website, add responsiveness and interactivity.
 - Cloudinary: Cloudinary was used for hosting the images.
@@ -223,7 +222,7 @@ Testing was performed using a MacBook Air (M1, 2020) on macOS Monterey with the 
 After testing the website I can confirm the project it's responsive in its all pages and works properly on all standard screen sizes.
 
 The forms are working in each section of the project.
-- The users can add, edit and delete eir own posts.
+- The users can add, edit and delete their own posts.
 - Comments can be added through the comment form. To be displayed need to be approved by the owner of the website.
 
 
@@ -330,8 +329,6 @@ During my work to the project, I had to migrate my database from Heroku to Eleph
 
 
 **Media**
-
-- All fonts imported from [Google Fonts](https://fonts.google.com/).
 
 - Screenshot under the section "site overview" was created with [Am I responsive](https://ui.dev/amiresponsive).
 
