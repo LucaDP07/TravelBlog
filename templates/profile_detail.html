@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="col col-md-6 offset-md-3 col-lg-4 offset-lg-4 mt-5">
+    <h2 class="text-center mb-3">View Profile</h2>
+
+    <div class="card">
+        <!-- The featured image URL goes in the src attribute -->
+        {% if "placeholder" in profile.featured_image.url %}
+        <img src="{% static 'images/no_user_image.jpg' %}" alt="No photo available image " class="card-img-top">
+        {% else %}
+        <img src=" {{ profile.featured_image.url }}" alt="user's profile image" class="card-img-top">
+        {% endif %}
+        <div class="card-body">
+          <h5 class="card-title text-center">{{ profile.user.username | title }}'s Profile</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>About me :</strong>  {{ profile.about_me  }}</li>
+          <li class="list-group-item"><strong>Favourite countries :</strong>  {{ profile.favourite_country  }}</li>
+        </ul>
+        
+      </div>
+      <div class="text-center mt-3 mb-3">
+        <a class="nav-link active" aria-current="page" href="{% url 'profile' %}">Back to Profile List</a>
+    </div>
+
+
+</div>
+{% endblock %}

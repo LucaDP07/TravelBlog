@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+    <h2 class="mt-5 text-center">Edit your Profile</h2>
+    <h4 class="mt-3 text-center">{{user.username|title}}'s Profile</h4>
+    <form method="POST" enctype="multipart/form-data" class="ms-2 me-2">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+
+        <input type="submit" value="Update" class="btn btn-success btn-lg bg-gradient mt-3 mb-3">
+    </form>
+</div>
+{% endblock %}

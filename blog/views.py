@@ -1,11 +1,15 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
+from .forms import CommentForm
+from .forms import ProfileEditForm
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
-from .models import Post
+from django.contrib.auth.models import User
+from .models import Post, Profile
 
 
 class PostList(generic.ListView):
@@ -149,3 +153,49 @@ class DeleteTrip(SuccessMessageMixin, LoginRequiredMixin, generic.DeleteView):
     def delete(self, request, *args, **kwargs):
         messages.warning(self.request, self.success_message)
         return super(DeleteTrip, self).delete(request, *args, **kwargs)
+
+
+@login_required
+def edit_profile(request):
+    """ Display the user's profile to edit """
+    profile = get_object_or_404(Profile, user=request.user)
+
+    if request.method == 'POST':
+        form = ProfileEditForm(
+                            request.POST or None,
+                            request.FILES,
+                            instance=profile)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your profile is successfully updated')
+            return redirect('home')
+        else:
+            messages.error(request,
+                           ('Update failed. Please ensure'
+                            'the form is valid.'))
+    else:
+        form = ProfileEditForm(instance=profile)
+    template = 'profile_edit.html'
+    context = {'form': form, }
+
+    return render(request, template, context)
+
+
+class ProfileList(LoginRequiredMixin, generic.ListView):
+    """Displays the member list page"""
+    model = Profile
+    queryset = Profile.objects.all()
+    template_name = "profile.html"
+    paginate_by = 8
+
+
+class ProfileDetail(LoginRequiredMixin, generic.DetailView):
+    """Displays profile detail page"""
+    model = Profile
+    queryset = Profile.objects.all()
+    template_name = 'profile_detail.html'
+
+    def get_object(self):
+        return get_object_or_404(
+                                Profile,
+                                user__username=self.kwargs['username'])

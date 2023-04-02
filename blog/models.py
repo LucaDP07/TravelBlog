@@ -4,6 +4,8 @@ Imports
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.dispatch import receiver
+from django.db.models.signals import post_save
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -60,3 +62,19 @@ class Meta:
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    featured_image = CloudinaryField('image', default='placeholder')
+    about_me = models.TextField(max_length=300, blank=True)
+    favourite_country = models.TextField(max_length=100, blank=True)
+
+    @receiver(post_save, sender=User)
+    def create_user_profile(sender, instance, created, **kwargs):
+        if created:
+            Profile.objects.create(user=instance)
+
+    @receiver(post_save, sender=User)
+    def save_user_profile(sender, instance, **kwargs):
+        instance.profile.save()
