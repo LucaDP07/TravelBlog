@@ -135,6 +135,16 @@ h1 {
     text-decoration: underline;
 }
 
+/* profile page */
+
+.user {
+    color: black;
+    margin: 4px;
+    text-transform: uppercase;
+}
+
+
+
 /* button styling */
 
 .btn-like {

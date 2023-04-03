@@ -25,7 +25,7 @@ class ProfileEditForm(forms.ModelForm):
                             required=False,
                             max_length=300,
                             widget=forms.Textarea)
-    favorite_location = forms.CharField(
+    favourite_country = forms.CharField(
                                     label='My Favourite Countries:',
                                     required=False,
                                     max_length=100,
@@ -34,6 +34,5 @@ class ProfileEditForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = (
-                'featured_image', 'about_me', 
-                'favorite_location')
-
+                'featured_image', 'about_me',
+                'favourite_country')

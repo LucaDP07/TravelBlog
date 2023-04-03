@@ -1,16 +1,32 @@
 {% extends "base.html" %}
-
+{% load static %}
+{% load crispy_forms_tags %}
 {% block content %}
 
-<div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
-    <h2 class="mt-5 text-center">Edit your Profile</h2>
-    <h4 class="mt-3 text-center">{{user.username|title}}'s Profile</h4>
-    <form method="POST" enctype="multipart/form-data" class="ms-2 me-2">
-        {% csrf_token %}
-        {{ form.as_p }}
-
-
-        <input type="submit" value="Update" class="btn btn-success btn-lg bg-gradient mt-3 mb-3">
-    </form>
+<div class="card trip-form">
+    <div class="row">
+        <div class="col text-center">
+            <br>
+            <a class="btn btn-warning" href="{% url 'home' %}">Go to the Home Page</a>
+        </div>
+    </div>
+<br>
+    <div class="card-title-form">
+        <h3>Edit Your Profile</h3>
+        <h4 class="mt-3 text-center">{{user.username|title}}'s Profile</h4>
+    </div>
+    <div class="card-body">
+        <div class="container-fluid">
+            <div class="row">
+                <form method="POST" enctype='multipart/form-data'>
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <br>
+                    <input type="submit" value="Submit" class="btn btn-warning">
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
+
 {% endblock %}
