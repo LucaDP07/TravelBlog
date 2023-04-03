@@ -165,6 +165,10 @@ h1 {
     margin: auto;
 }
 
+.btn-outline-primary {
+    color: var(--gray-color);
+    border-color: var(--gray-color);
+  }
 
 /* media queries */
 
