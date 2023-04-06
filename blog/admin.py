@@ -35,3 +35,5 @@ class ProfileAdmin(admin.ModelAdmin):
 
     list_display = ('user', 'about_me', 'featured_image',
                     'favourite_country')
+
+

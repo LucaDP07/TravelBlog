@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from .forms import CommentForm
 from .forms import ProfileEditForm
 from django.views import generic, View
+from django.conf import settings
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
@@ -33,8 +34,11 @@ class PostDetail(View):
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by('created_on')
         liked = False
+        is_favourite = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
+        if post.favourite.filter(id=self.request.user.id).exists():
+            is_favourite = True
 
         return render(
             request,
@@ -44,6 +48,7 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": False,
                 "liked": liked,
+                "is_favourite": is_favourite,
                 "comment_form": CommentForm()
 
             },
@@ -59,8 +64,11 @@ class PostDetail(View):
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by('created_on')
         liked = False
+        is_favourite = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
+        if post.favourite.filter(id=self.request.user.id).exists():
+            is_favourite = True
 
         comment_form = CommentForm(data=request.POST)
 
@@ -82,9 +90,45 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": True,
                 "liked": liked,
+                "is_favourite": is_favourite,
                 "comment_form": CommentForm()
             },
         )
+
+
+class FavouritePost(LoginRequiredMixin, View):
+    """
+    This view allows a logged in user to add a post to favourites.
+    """
+    def post(self, request, slug):
+        """
+        Checks if user id already exists in the favourites
+        field in the Post database.
+        If they exist then remove them from the database.
+        If they don't exist then add them to the database.
+        """
+        post = get_object_or_404(Post, slug=slug)
+        if post.favourite.filter(id=request.user.id).exists():
+            post.favourite.remove(request.user)
+            messages.success(self.request, 'Post removed from favourites')
+        else:
+            post.favourite.add(request.user)
+            messages.success(self.request, 'Post added to favourites')
+
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+class MyFavourites(LoginRequiredMixin, generic.ListView):
+    """
+    This view allows a logged in user to view their favourite posts.
+    """
+    model = Post
+    template_name = 'my_favourites.html'
+    paginate_by = 8
+
+    def get_queryset(self):
+        """Override get_queryset to filter by user favourites"""
+        return Post.objects.filter(favourite=self.request.user.id)
 
 
 class PostLike(View):

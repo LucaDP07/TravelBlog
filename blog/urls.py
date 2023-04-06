@@ -12,6 +12,11 @@ urlpatterns = [
     path('addtrip/', views.CreateTrip.as_view(), name='addtrip'),
     path('tripedit/<int:pk>', views.EditTrip.as_view(), name='tripedit'),
     path('tripdelete/<int:pk>', views.DeleteTrip.as_view(), name='tripdelete'),
+    path(
+        'favourite/<slug:slug>',
+        views.FavouritePost.as_view(), name='favourite_post'
+        ),
+    path('myfavourites/', views.MyFavourites.as_view(), name='my_favourites'),
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
     path('like/<slug:slug>', views.PostLike.as_view(), name='post_like'),
     ]

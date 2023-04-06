@@ -25,6 +25,7 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='blogpost_like', blank=True)
     content = models.TextField(blank=False,)
+    favourite = models.ManyToManyField(User, related_name='favourite', blank=True)
 
     class Meta:
         """
@@ -78,3 +79,6 @@ class Profile(models.Model):
     @receiver(post_save, sender=User)
     def save_user_profile(sender, instance, **kwargs):
         instance.profile.save()
+
+
+

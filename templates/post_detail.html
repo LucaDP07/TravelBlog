@@ -32,7 +32,22 @@
                         {% endif %}
                         <span class="text-secondary">{{ post.number_of_likes }} </span>
                     </div>
-
+                    <div class="col-1">
+                        {% if user.is_authenticated %}
+                        <form class="d-inline" action="{% url 'favourite_post' post.slug %}" method="POST">
+                            {% csrf_token %}
+                            {% if is_favourite  %}
+                            <button type="submit" name="favourite_id"
+                                value="{{post.slug}}" class="btn-like">
+                                <i class="fas fa-bookmark"></i></button>
+                            {% else %}
+                            <button type="submit" name="favourite_id"
+                                value="{{post.slug}}" class="btn-like">
+                                <i class="far fa-bookmark"></i></button>
+                            {% endif %}
+                        </form>
+                        {% endif %}
+                    </div>
                     <!-- Article's number of comments -->
                     <div class="col-1">
                         {% with comments.count as total_comments %}
