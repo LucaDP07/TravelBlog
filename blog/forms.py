@@ -1,5 +1,6 @@
 from .models import Comment, Profile
 from django import forms
+from django.forms import ModelForm
 from django_summernote.widgets import SummernoteWidget
 
 
@@ -36,3 +37,4 @@ class ProfileEditForm(forms.ModelForm):
         fields = (
                 'featured_image', 'about_me',
                 'favourite_country')
+

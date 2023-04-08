@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from .forms import CommentForm
 from .forms import ProfileEditForm
 from django.views import generic, View
+from django.views.generic import CreateView
 from django.conf import settings
 from django.http import HttpResponseRedirect
 from django.contrib import messages
@@ -10,7 +11,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from django.contrib.auth.models import User
-from .models import Post, Profile
+from .models import Post, Profile, GalleryBlog
 
 
 class PostList(generic.ListView):
@@ -243,3 +244,18 @@ class ProfileDetail(LoginRequiredMixin, generic.DetailView):
         return get_object_or_404(
                                 Profile,
                                 user__username=self.kwargs['username'])
+
+
+class Gallery(View):
+    """
+    View to render Gallery page.
+    """
+
+    def get(self, request):
+        """
+        Get method, taking all images set to active from database and
+        render them in gallery html.
+        """
+        queryset = list(GalleryBlog.objects.filter(active=True).order_by("name").values())
+        images = {"images": queryset}
+        return render(request, "gallery.html", context=images)

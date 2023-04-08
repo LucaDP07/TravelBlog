@@ -81,4 +81,10 @@ class Profile(models.Model):
         instance.profile.save()
 
 
-
+class GalleryBlog(models.Model):
+    """
+    Model for galleryimages.
+    """
+    name = models.CharField(max_length=150, unique=False, default="image")
+    image = CloudinaryField('image', default='placeholder')
+    active = models.BooleanField(default=False)
