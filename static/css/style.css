@@ -143,12 +143,8 @@ h1 {
     text-transform: uppercase;
 }
 
-img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16/9;
-    border-radius: 10px;
-}
+
+/* gallery page */
 
 .carousel-border {
     border: 2px solid #b87333 !important;
@@ -157,6 +153,12 @@ img {
     border-radius: 10px;
 }
 
+img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+}
 
 
 /* button styling */

@@ -20,6 +20,10 @@ class CommentForm(forms.ModelForm):
 
 class ProfileEditForm(forms.ModelForm):
 
+    """
+    Form to edit profile
+    """
+
     featured_image = forms.FileField(label='Image')
     about_me = forms.CharField(
                             label='About Me:',
@@ -37,4 +41,3 @@ class ProfileEditForm(forms.ModelForm):
         fields = (
                 'featured_image', 'about_me',
                 'favourite_country')
-

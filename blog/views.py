@@ -105,8 +105,8 @@ class FavouritePost(LoginRequiredMixin, View):
         """
         Checks if user id already exists in the favourites
         field in the Post database.
-        If they exist then remove them from the database.
-        If they don't exist then add them to the database.
+        If they exist it removes them from the database.
+        If they don't exist it adds them to the database.
         """
         post = get_object_or_404(Post, slug=slug)
         if post.favourite.filter(id=request.user.id).exists():
@@ -248,14 +248,15 @@ class ProfileDetail(LoginRequiredMixin, generic.DetailView):
 
 class Gallery(View):
     """
-    View to render Gallery page.
+    Displays the Gallery page.
     """
 
     def get(self, request):
         """
-        Get method, taking all images set to active from database and
+        Takes all images set to active from database and
         render them in gallery html.
         """
-        queryset = list(GalleryBlog.objects.filter(active=True).order_by("name").values())
+        queryset = list(
+            GalleryBlog.objects.filter(active=True).order_by("name").values())
         images = {"images": queryset}
         return render(request, "gallery.html", context=images)

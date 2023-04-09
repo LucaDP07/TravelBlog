@@ -41,6 +41,3 @@ class ProfileAdmin(admin.ModelAdmin):
 class GalleryBlog(admin.ModelAdmin):
 
     list_display = ('name', 'active', 'image')
-    list_filter = ('name', 'active')
-    search_fields = ['name', 'image']
-
