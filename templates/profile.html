@@ -20,7 +20,7 @@
                                 {% if "placeholder" in profile.featured_image.url %}
                                 <img class="card-img-top" src="{% static 'images/nophoto.png' %}" alt="default no photo image">
                                 {% else %}
-                                <img class="card-img-top" src="{{ profile.featured_image.url }}" alt="Image posted by the user for thier profile">
+                                <img class="card-img-top" src="{{ profile.featured_image.url }}" alt="profile picture chosen by user">
                                 {% endif %}
                             </div>
                             <h2 class="user">{{ profile.user.username | title }}</h2>
