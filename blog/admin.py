@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment, Profile
+from .models import Post, Comment, Profile, GalleryBlog
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -36,4 +36,11 @@ class ProfileAdmin(admin.ModelAdmin):
     list_display = ('user', 'about_me', 'featured_image',
                     'favourite_country')
 
+
+@admin.register(GalleryBlog)
+class GalleryBlog(admin.ModelAdmin):
+
+    list_display = ('name', 'active', 'image')
+    list_filter = ('name', 'active')
+    search_fields = ['name', 'image']
 

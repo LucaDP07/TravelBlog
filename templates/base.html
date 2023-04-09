@@ -67,7 +67,7 @@
                 <ul class="nav navbar-brand">
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="btn btn-outline-primary me-3"
+                        <a class="btn btn-outline-light me-3"
                             href="{% url 'profile_edit' %}">{{user.username|title}}</a>
                     </li>
                     {% endif %}

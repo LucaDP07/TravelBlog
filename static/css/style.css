@@ -143,6 +143,20 @@ h1 {
     text-transform: uppercase;
 }
 
+img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+}
+
+.carousel-border {
+    border: 2px solid #b87333 !important;
+    padding: 5px;
+    box-shadow: 6px 4px 8px -2px;
+    border-radius: 10px;
+}
+
 
 
 /* button styling */
@@ -165,11 +179,10 @@ h1 {
     margin: auto;
 }
 
-.btn-outline-primary {
+.btn-outline-light {
     color: var(--gray-color);
     border-color: var(--gray-color);
-  }
-
+}
 
 
 /* media queries */
