@@ -40,32 +40,27 @@ There are 6 EPICS and 13 USER STORIES.
 - USER STORIES:
 1. As a user I can create an account so that I can interact with the website with likes, comments and creating my own posts.(Create Account #16)
 2. As a registered user I can login and logout of the site so that I can access my content.(LogIn/LogOut #28)
+3. As a registered user, I can view the profiles of the members of the community so that I can find out more about the authors of the posts.(View Community Members #29)
 
 3.EPIC: Create landing page to attract users to the site.
 - USER STORIES:
 1. As a site admin I can provide a clear idea of what the website is about so that users know what to expect from it.(Create a Landing Page #15)
 
 4.EPIC: Enable registered users to CRUD their own trips.
-
 - USER STORIES:
-
 1. As a registered user I can CRUD my own trips so that I can manage my own content.(Create Post #17)
 
-5.EPIC: Create a trips list to provide content to users.
-
+5.EPIC: Create a trips list and gallery to provide content to users.
 - USER STORIES:
-
 1. As a user I can view a list of articles so that I can select the contents I like and see what the site’s purpose is.(View Pagination #19)
+2. As a user I can go to the Gallery Page so that I can see pictures posted by the admin.(Gallery #30)
 
 6.EPIC: Enable registered users to interact with trips posts to enhance UX.
-
 - USER STORIES:
-
 1. As a registered user I can like/unlike posts so that I can engage with the site content.(Like/Unlike Post #23)
-
 2. As a registered user I can comment a post so that I can engage with the community and be involved.(Comment Post#21)
-
 3. As a registered user I can add a picture to my post so that I can create a more visually interesting content.(Image Uploading#25)
+4. As a Registered User, I can save my favourites posts so that I can find them easily. (Favourites #31)
 
 **Strategy**
 
@@ -83,111 +78,136 @@ The user will first see the Home Page where the purpose of the website is made c
 Both registered and unregistered users can read the posts, but only registered users can interact with them by leaving a comment or liking the post itself.
 Post detail page contains details of the post, comments and number of likes.
 
-The "Add a trip" page is accessible only for registered users. This page can be accessed by clicking the 'Add a trip' button in the navigation bar which is only visible for a registered user. After creating the post, the user can see it on the Home Page. Users are able to edit or delete their own posts by clicking the Edit/Delete button located underneath the post. These buttons are only visible to the owner of the post.
+The "Add a trip" page is accessible only for registered users. This page can be accessed by clicking the 'Add a trip' button in the navigation bar which is only visible for a registered user. After creating the post, the user can see it on the Home Page. Users are able to edit or delete their own posts by clicking the Edit/Delete button located underneath the post. These buttons are only visible to the owner of the post. Registered users are also able to save their own favourite posts on a personal page where they can easily find what the contents they liked the most. Every registered users has also a profile section where they can share a short bio and choose a profile picture. For all users there is also a carousel gallery page that allows them to see a selection of pictures selected by the admin and representing different areas of the planet.
 
 **WIREFRAMES**
 - - -
 
-**Home Page: Desktop - Not logged in view**
+**Home Page**
 
-![Alternate text](/static/images/Home%20-%20Desktop%20-%201.png)
+![Alternate text](/static/images/home.png)
 
-**Second Page: Desktop - Not logged in view**
 
-![Alternate text](/static/images/Second%20page%20-%20Desktop.png)
+**Post Page**
 
-**Home Page: Desktop - Logged in view**
-
-![Alternate text](/static/images/Home-Desktop%20-%202.png)
-
-**Post Page: Desktop - Not logged in view**
-
-![Alternate text](/static/images/Article%20Page%20-%20Desktop%20-%201.png)
-
-**Post Page: Desktop - Logged in view**
-
-![Alternate text](/static/images/Article%20Page%20-%20Desktop%20-%202.png)
+![Alternate text](/static/images/post_detail.png)
 
 **Add Trip Form: Desktop**
 
-![Alternate text](/static/images/Add%20trip%20form.png)
+![Alternate text](/static/images/add_a_trip.png)
 
-**Home Page: Mobile**
+**Community Page**
 
-![Alternate text](/static/images/Home%20-%20Mobile.png)
+![Alternate text](/static/images/community.png)
+
+**Profile Page**
+
+![Alternate text](/static/images/profile_page.png)
+
+**Profile edit Page**
+
+![Alternate text](/static/images/profile_edit.png)
+
+**Carousel Gallery Page**
+
+![Alternate text](/static/images/carousel_gallery.png)
 
 
 **FEATURES**
 - - -
 
- - Navigation menu
+- Navigation menu
  
- The navigation menu is clear and consistent throughout the site to provide the users an easy navigation. Links to Home, Add a trip, Register and Sign In/Out are available. If the user is not signed in the Sign in and Register links are visible in the navbar. If the user is signed in the Sign In and Register links are replaced by a Log Out link and the Add a trip link is visible. While the Logo will be always displayed in any screen, the other links that the user can find in the bar, will switch to hamburger on tablets and mobiles.
+The navigation menu is clear and consistent throughout the site to provide the users an easy navigation. Links to Home, Add a trip, Register and Sign In/Out are available. If the user is not signed in the Sign in and Register links are visible in the navbar. If the user is signed in the Sign In and Register links are replaced by a Log Out link and the Add a trip link is visible. While the Logo will be always displayed in any screen, the other links that the user can find in the bar, will switch to hamburger on tablets and mobiles.
 
- ![Alternate text](/static/images/navbar.png)
+![Alternate text](/static/images/navbar.png)
 
- - Footer
+- Footer
 
- At the bottom of the page we can find the footer with the links to direct the user to the Facebook, Instagram and Twitter pages.
+At the bottom of the page we can find the footer with the links to direct the user to the Facebook, Instagram and Twitter pages.
  
- ![Alternate text](/static/images/footer.png)
+![Alternate text](/static/images/footer.png)
 
- - Home Page
+- Home Page
 
- 1.A hero image is displayed at the top of the page with overlay text welcoming the user to the website. Right below the users can also find a short description of the purpose of the page and what they will find on it.
+A hero image is displayed at the top of the page with overlay text welcoming the user to the website. Right below the users can also find a short description of the purpose of the page and what they will find on it.
 
 ![Alternate Text](/static/images/home_page.png)
 
- - Trips section
+- Trips section
  
- Right below the brief description of the purpose of the page, the users will find a list of six posts per page(max.) to avoid loading time issues.
+Right below the brief description of the purpose of the page, the users will find a list of six posts per page(max.) to avoid loading time issues.
 
- ![Alternate text](/static/images/trips_section.png)
+![Alternate text](/static/images/trips_section.png)
 
- - Add a trip form
+- Add a trip form
  
- When the users are logged in, they can see on the navigation bar the option "Add a trip". Simply by clicking on it the form opens and the user can enter all the fields to add a post and create a new content which will be displayed on the website.
+When the users are logged in, they can see on the navigation bar the option "Add a trip". Simply by clicking on it the form opens and the user can enter all the fields to add a post and create a new content which will be displayed on the website.
 
- ![Alternate text](/static/images/form.png)
+![Alternate text](/static/images/form.png)
  
- - Post Detail page
+- Post Detail page
  
- Accessed by any user simply by clicking on the post itself. The not logged in users can also read the approved comments right below the post. If the user is logged in, instead, there is another function that allows to press the Like button and leave a comment regarding the post. The comments entered here need to be reviewed by the site owner before being displayed in this post detail page.
+Accessed by any user simply by clicking on the post itself. The not logged in users can also read the approved comments right below the post. If the user is logged in, instead, there is another function that allows to press the Like button and leave a comment regarding the post. The comments entered here need to be reviewed by the site owner before being displayed in this post detail page.
 
- ![Alternate text](/static/images/post_detail.png)
+![Alternate text](/static/images/detail_post.png)
 
- ![Alternate text](/static/images/comments_section.png)
+- Comment Section
 
- - Edit Post page
+When the user is registered, a box to leave a comment to the post will be displayed right under the post.
 
- The Edit post page is accessed by edit post button which is available in the post detail page and it's visible for the user's own post only so that the post can only be edited by its own user or by superuser using the admin page. If the user confirms the changes made to the post, will be redirected to the Home Page and a message will show below the navbar to inform that the post was succesfully edited.
+![Alternate text](/static/images/comments_section.png)
 
- ![Alternate text](/static/images/edit_delete.png)
+- Edit Post page
 
- - Delete Post Page
+The Edit post page is accessed by edit post button which is available in the post detail page and it's visible for the user's own post only so that the post can only be edited by its own user or by superuser using the admin page. If the user confirms the changes made to the post, will be redirected to the Home Page and a message will show below the navbar to inform that the post was succesfully edited.
 
- The owner of the post also have another button available, which is the Delete Post button. If the user clicks on it a Delete Post page displays and asks the user for confirmation to delete the post. Users can either click on "Yes, delete post!" or cancel and go back to the Home Page. 
- If the user confirms to delete the post, will be redirected to the Home Page and a message will show below the navbar to inform that the post was deleted.
+![Alternate text](/static/images/edit_delete.png)
 
- ![Alternate text](/static/images/edit_delete.png)
+- Delete Post Page
 
- - Register Page
+The owner of the post also have another button available, which is the Delete Post button. If the user clicks on it a Delete Post page displays and asks the user for confirmation to delete the post. Users can either click on "Yes, delete post!" or cancel and go back to the Home Page. 
+If the user confirms to delete the post, will be redirected to the Home Page and a message will show below the navbar to inform that the post was deleted.
 
- This page can be opened from the register button in the navigation bar. New visitors are simply asked to enter username, password and password confirmation to register. Email field can be left blank as it is optional. Once successfully registered, users will be redirected to the Home Page and have access to all the features available for registered users.
+![Alternate text](/static/images/edit_delete.png)
 
- ![Alternate text](/static/images/signup.png)
+- My Favourites Page
 
- - Sign In Page
+When the users are registered and logged in, a bookmark icon will display on the post detail page, right between the star and comment icons. Simply by clicking on it, the users will be able to add a specific post to their favourites, so that it can be easily found. In order to remove the article from the list of favourites, the users only need to click on the bookmark icon a second time.
 
- The Sign In button can be accessed to login. Username and password will be required. On successful login, users will be redirected to the Home Page and a message to inform them that they logged in successfully will be displayed under the navigation bar.
+![Alternate text](/static/images/favourites_page.png)
 
- ![Alternate text](/static/images/signin.png)
+- Community Page
 
- - Sign Out Page
+Registered users can share something about them.
+By clicking on the Community tab on the Navbar, the user will get access to the Community page. This page has a list of registered members with a profile picture and a “view profile” button. By clicking on it, the user will be able to read a short bio and the favourites countries of the author selected.
+Each user’s profile is created at the moment of their registration. Each profile is created empty, but all the fields can be left blank if the user doesn’t want to share any information with others. In order to update their own profiles, users have to click on their username, which is displayed on the right side of the navbar. Once the update has been submitted, the user will be directed to the home page and a message will be displayed to confirm the successful update.
 
- Once a user is logged in, the Sign In button in the navigation bar will be replaced with the Logout button. If they want to logout all they need to do is simply click this button and confirm to sign out. Once again, users will be redirected to the Home Page and a message to inform them that they logged out successfully will be displayed under the navigation bar.
+![Alternate text](/static/images/community.png)
 
- ![Alternate text](/static/images/signout.png)
+- Gallery Page
+
+The gallery page displays a little carousel gallery with some images chosen by the site’s owner.  The user can enjoy a picture that represents an area of the world, such as Asia, Oceania, Europe, Africa, Middle East, North America, Central America, South America and Antarctica.
+
+![Alternate text](/static/images/gallery_page.png)
+
+- Register Page
+
+This page can be opened from the register button in the navigation bar. New visitors are simply asked to enter username, password and password confirmation to register. Email field can be left blank as it is optional. Once successfully registered, users will be redirected to the Home Page and have access to all the features available for registered users.
+
+![Alternate text](/static/images/signup.png)
+
+- Sign In Page
+
+The Sign In button can be accessed to login. Username and password will be required. On successful login, users will be redirected to the Home Page and a message to inform them that they logged in successfully will be displayed under the navigation bar.
+
+![Alternate text](/static/images/signin.png)
+
+- Sign Out Page
+
+Once a user is logged in, the Sign In button in the navigation bar will be replaced with the Logout button. If they want to logout all they need to do is simply click this button and confirm to sign out. Once again, users will be redirected to the Home Page and a message to inform them that they logged out successfully will be displayed under the navigation bar.
+
+![Alternate text](/static/images/signout.png)
  
 
 **TECHNOLOGIES USED**
@@ -231,7 +251,7 @@ The forms are working in each section of the project.
 
 HTML: No errors were returned when passing through the official W3C Validator.
 
-![Alternate text](/static/images/html_responsive.png)
+![Alternate text](/static/images/home_page_responsive.png)
 
 CSS: No errors were returned when passing through the official (Jigsaw) Validator.
 
@@ -245,7 +265,7 @@ All the .py files are validated in the PEP8 online validator replacement provide
 
 - apps.py
 
-![Alternate text](/static/images/apps.png)
+![Alternate text](/static/images/app.png)
 
 - forms.py
 
