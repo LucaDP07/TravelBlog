@@ -3,7 +3,7 @@
 **SITE OVERVIEW**
 - - - 
 
-TravelDream is travel blog where users can share their own travel experiences, a place to build a home for their stories and where they can also enjoy the contents created by other users and, why not, get inspired for their next adventure.
+TravelDream is a travel blog where users can share their own travel experiences, a place to build a home for their stories and where they can also enjoy the contents created by other users and, why not, get inspired for their next adventure.
 
 ![Alternate text](/static/images/responsive.png)
 
@@ -16,11 +16,13 @@ You can view the deployed website [here](https://traveldream.herokuapp.com/).
 
 - Find out the purpose of the website.
 - View, create, edit and delete their own post on the website.
-- View posts created by other users and being able to like and comment them.
+- View and edit their own profiles.
+- View posts created by other users and being able to like, save and comment them.
+- View profiles of other members of the community.
 
 **Site Owners goals**
 
-- Non registered users are not able to like or comment any post.
+- Non registered users are not able to like, save or comment any post. They also can't see the profiles of the members of the community.
 - Comments need to be approved in order to guarantee safe contents to the users.
 - Posts and comments can be controlled through the admin area to avoid an inappropriate use of the website.
 
@@ -75,10 +77,10 @@ Each user story was linked to an Epic.
 
 The user will first see the Home Page where the purpose of the website is made clear with a brief introduction. Users can also see a list of 6 posts.
 
-Both registered and unregistered users can read the posts, but only registered users can interact with them by leaving a comment or liking the post itself.
+Both registered and unregistered users can read the posts, but only registered users can interact with them by leaving a comment, saving or liking the post itself.
 Post detail page contains details of the post, comments and number of likes.
 
-The "Add a trip" page is accessible only for registered users. This page can be accessed by clicking the 'Add a trip' button in the navigation bar which is only visible for a registered user. After creating the post, the user can see it on the Home Page. Users are able to edit or delete their own posts by clicking the Edit/Delete button located underneath the post. These buttons are only visible to the owner of the post. Registered users are also able to save their own favourite posts on a personal page where they can easily find what the contents they liked the most. Every registered users has also a profile section where they can share a short bio and choose a profile picture. For all users there is also a carousel gallery page that allows them to see a selection of pictures selected by the admin and representing different areas of the planet.
+The "Add a trip" page is accessible only for registered users. This page can be accessed by clicking the 'Add a trip' button in the navigation bar which is only visible for a registered user. After creating the post, the user can see it on the Home Page. Users are able to edit or delete their own posts by clicking the Edit/Delete button located underneath the post. These buttons are only visible to the owner of the post. Registered users are also able to save their own favourite posts on a personal page where they can easily find the contents they liked the most. Every registered users has also a profile section where they can share a short bio and choose a profile picture. For all users there is also a carousel gallery page that allows them to see a selection of pictures selected by the admin and representing different areas of the planet.
 
 **WIREFRAMES**
 - - -
@@ -87,12 +89,11 @@ The "Add a trip" page is accessible only for registered users. This page can be 
 
 ![Alternate text](/static/images/home.png)
 
-
 **Post Page**
 
 ![Alternate text](/static/images/post_detail.png)
 
-**Add Trip Form: Desktop**
+**Add Trip Form**
 
 ![Alternate text](/static/images/add_a_trip.png)
 
@@ -104,7 +105,7 @@ The "Add a trip" page is accessible only for registered users. This page can be 
 
 ![Alternate text](/static/images/profile_page.png)
 
-**Profile edit Page**
+**Edit Profile Page**
 
 ![Alternate text](/static/images/profile_edit.png)
 
@@ -118,7 +119,7 @@ The "Add a trip" page is accessible only for registered users. This page can be 
 
 - Navigation menu
  
-The navigation menu is clear and consistent throughout the site to provide the users an easy navigation. Links to Home, Add a trip, Register and Sign In/Out are available. If the user is not signed in the Sign in and Register links are visible in the navbar. If the user is signed in the Sign In and Register links are replaced by a Log Out link and the Add a trip link is visible. While the Logo will be always displayed in any screen, the other links that the user can find in the bar, will switch to hamburger on tablets and mobiles.
+The navigation menu is clear and consistent throughout the site to provide the users an easy navigation. Links to Home, Gallery, Add a trip, Community, My Favourites, Register and Sign In/Out are available. If the user is not signed in the Home, Gallery, Sign in and Register links are visible in the navbar. If the user is signed in the Sign In and Register links are replaced by a Log Out link and the Add a trip link, Community and My Favourites links are visible. A username button is also available and allows the user to edit the profile. While the Logo will be always displayed in any screen, the other links that the user can find in the bar, will switch to hamburger on tablets and mobiles.
 
 ![Alternate text](/static/images/navbar.png)
 
@@ -148,7 +149,7 @@ When the users are logged in, they can see on the navigation bar the option "Add
  
 - Post Detail page
  
-Accessed by any user simply by clicking on the post itself. The not logged in users can also read the approved comments right below the post. If the user is logged in, instead, there is another function that allows to press the Like button and leave a comment regarding the post. The comments entered here need to be reviewed by the site owner before being displayed in this post detail page.
+Accessed by any user simply by clicking on the post itself. The not logged in users can also read the approved comments right below the post. If the user is logged in, instead, there is another function that allows to press the Like button, save and leave a comment regarding the post. The comments entered here need to be reviewed by the site owner before being displayed in this post detail page.
 
 ![Alternate text](/static/images/detail_post.png)
 
@@ -183,7 +184,7 @@ Registered users can share something about them.
 By clicking on the Community tab on the Navbar, the user will get access to the Community page. This page has a list of registered members with a profile picture and a “view profile” button. By clicking on it, the user will be able to read a short bio and the favourites countries of the author selected.
 Each user’s profile is created at the moment of their registration. Each profile is created empty, but all the fields can be left blank if the user doesn’t want to share any information with others. In order to update their own profiles, users have to click on their username, which is displayed on the right side of the navbar. Once the update has been submitted, the user will be directed to the home page and a message will be displayed to confirm the successful update.
 
-![Alternate text](/static/images/community.png)
+![Alternate text](/static/images/community_page.png)
 
 - Gallery Page
 
@@ -244,6 +245,8 @@ After testing the website I can confirm the project it's responsive in its all p
 
 The forms are working in each section of the project.
 - The users can add, edit and delete their own posts.
+- The users can edit their own profiles.
+- Users can like and save the posts they like the most.
 - Comments can be added through the comment form. To be displayed need to be approved by the owner of the website.
 
 
@@ -340,19 +343,16 @@ During my work to the project, I had to migrate my database from Heroku to Eleph
 **CREDITS**
 - - - 
 
-**Content**
+- [I Think Therefore I Blog Project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/).
 
-- The Navigation bar, the comments form and the index were inspired by the [I Think Therefore I Blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/) Project.
+- [CODEMY](https://www.youtube.com/@Codemycom).
 
-- Full CRUD functionality application was achieved thanks to [CODEMY](https://www.youtube.com/@Codemycom).
+- [Stack Overflow](https://stackoverflow.com/).
 
-- Text posts has been taken by [Lonely Planet](https://www.lonelyplanet.com/).
+- [Lonely Planet](https://www.lonelyplanet.com/).
 
+- [Am I responsive](https://ui.dev/amiresponsive).
 
-**Media**
+- [Pixabay](https://pixabay.com/).
 
-- Screenshot under the section "site overview" was created with [Am I responsive](https://ui.dev/amiresponsive).
-
-- Pictures used for the website have been taken from [Pixabay](https://pixabay.com/).
-
-- The wireframes have been created using [Balsamiq Wireframes](https://balsamiq.com/wireframes/).
+- [Balsamiq Wireframes](https://balsamiq.com/wireframes/).
