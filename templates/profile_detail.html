@@ -8,7 +8,6 @@
     <h2 class="card-title text-center">{{ profile.user.username | title }}</h2>
   </div>
   <div class="card">
-    <!-- The featured image URL goes in the src attribute -->
     {% if "placeholder" in profile.featured_image.url %}
     <img src="{% static 'images/nophoto.png' %}" alt="No photo profile available" class="card-img-top">
     {% else %}
